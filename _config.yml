@@ -19,6 +19,8 @@ crumbs:
   - link: http://development.rc.ucl.ac.uk/training
     text: MATERIALS
 
+baseurl: /training/introductory
+
 markdown: redcarpet
 redcarpet:
   extensions: ["strikethrough","tables"]

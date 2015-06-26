@@ -49,7 +49,8 @@ indigo: indigo-jekyll-master Makefile
 
 .PHONY: ready
 
-ready: indigo notebooks/00pythons.html notebooks/01exemplar.html notebooks/02types.html \
+ready: indigo notebooks/00pythons.html notebooks/010exemplar.html notebooks/02types.html \
+			 notebooks/015variables.html notebooks/016using_functions.html \
 	     notebooks/03control.html notebooks/04functions.html notebooks/05modules.html notebooks/06exercise.html
 
 _site: ready
