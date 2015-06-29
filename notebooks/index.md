@@ -1,5 +1,5 @@
 ---
-title: IPython Notebooks
+title: Course Content
 ---
 
 The core of this course is a series of "IPython notebooks"
