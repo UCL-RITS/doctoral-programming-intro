@@ -52,7 +52,12 @@ indigo: indigo-jekyll-master Makefile
 ready: indigo notebooks/00pythons.html notebooks/010exemplar.html notebooks/023types.html \
 			 notebooks/015variables.html notebooks/016using_functions.html \
 			 notebooks/025containers.html notebooks/028dictionaries.html \
-			 notebooks/032conditionality.html notebooks/035looping.html 
+			 notebooks/032conditionality.html notebooks/035looping.html \
+			 notebooks/029structures.html \
+			 notebooks/037comprehensions.html \
+			 notebooks/04functions.html \
+			 notebooks/050import.html \
+			 notebooks/060files.html
 
 _site: ready
 	jekyll build	
