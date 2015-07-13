@@ -57,7 +57,10 @@ ready: indigo notebooks/00pythons.html notebooks/010exemplar.html notebooks/023t
 			 notebooks/037comprehensions.html \
 			 notebooks/04functions.html \
 			 notebooks/050import.html \
-			 notebooks/060files.html
+			 notebooks/060files.html \
+			 notebooks/061internet.html \
+			 notebooks/062csv.html \
+			 notebooks/064JsonYamlXML.html
 
 _site: ready
 	jekyll build	
