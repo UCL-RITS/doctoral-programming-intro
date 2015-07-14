@@ -60,7 +60,8 @@ ready: indigo notebooks/00pythons.html notebooks/010exemplar.html notebooks/023t
 			 notebooks/060files.html \
 			 notebooks/061internet.html \
 			 notebooks/062csv.html \
-			 notebooks/064JsonYamlXML.html
+			 notebooks/064JsonYamlXML.html \
+			 notebooks/072plotting.html
 
 _site: ready
 	jekyll build	
