@@ -24,7 +24,7 @@ default: _site
 	plantuml -p < $< > $@
 
 %.html: %.ipynb Makefile jekyll.tpl
-	ipython nbconvert --to html  --ExecutePreprocessor.timeout=120--template jekyll.tpl --execute --stdout $< > $@
+	ipython nbconvert --to html  --ExecutePreprocessor.timeout=120 --template jekyll.tpl --execute --stdout $< > $@
 
 %.html: %.ipyhtml Makefile
 	yamlheader 
