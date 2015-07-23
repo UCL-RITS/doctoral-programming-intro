@@ -23,26 +23,29 @@ default: _site
 %.png: %.uml Makefile
 	plantuml -p < $< > $@
 
-%.html: %.ipynb Makefile jekyll.tpl
-	ipython nbconvert --to html  --ExecutePreprocessor.timeout=120 --template jekyll.tpl --execute --stdout $< > $@
+%.html: %.nbconvert.ipynb Makefile jekyll.tpl
+	ipython nbconvert --to html  --template jekyll.tpl --stdout $< > $@
 
 combined.ipynb: notebooks/*.ipynb
 	python nbmerge.py $^ $@
 
-notes.pdf: combined.ipynb Makefile
-	ipython nbconvert --to pdf --ExecutePreprocessor.timeout=120 --template report --execute $<
-	mv combined.pdf notes.pdf
+%.nbconvert.ipynb: %.ipynb
+	ipython nbconvert --to notebook --ExecutePreprocessor.timeout=120 --execute --stdout $< > $@
+
+notes.pdf: combined.nbconvert.ipynb Makefile
+	ipython nbconvert --to pdf --template report  $<
+	mv combined.nbconvert.pdf notes.pdf
 
 master.zip: Makefile
 	rm -f master.zip
 	wget https://github.com/UCL-RITS/indigo-jekyll/archive/master.zip
 
-indigo-jekyll-master: Makefile master.zip
+indigo-jekyll-master: master.zip
 	rm -rf indigo-jekyll-master
 	unzip master.zip
 	touch indigo-jekyll-master
 
-indigo: indigo-jekyll-master Makefile
+indigo: indigo-jekyll-master
 	cp -r indigo-jekyll-master/indigo/images .
 	cp -r indigo-jekyll-master/indigo/js .
 	cp -r indigo-jekyll-master/indigo/css .
@@ -83,5 +86,7 @@ clean:
 	rm -rf notebooks/*.html
 	rm -f index.html
 	rm -rf _site
+	rm notes.pdf
+	rm -rf combined*
 	rm -rf images js css _includes _layouts favicon* master.zip indigo-jekyll-master
 
