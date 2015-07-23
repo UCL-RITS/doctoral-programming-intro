@@ -61,10 +61,13 @@ ready: indigo notebooks/00pythons.html notebooks/010exemplar.html notebooks/023t
 			 notebooks/061internet.html \
 			 notebooks/062csv.html \
 			 notebooks/064JsonYamlXML.html \
+			 notebooks/066QuakesSolution.html \
 			 notebooks/072plotting.html \
 			 notebooks/082NumPy.html \
 			 notebooks/084Boids.html \
-			 notebooks/091Libraries.html
+			 notebooks/091Libraries.html \
+			 notebooks/101Classes.html \
+			 notebooks/110Capstone.html
 
 _site: ready
 	jekyll build	
