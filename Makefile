@@ -8,7 +8,7 @@ PANDOCARGS=-t revealjs -s -V theme=night --css=http://lab.hakim.se/reveal-js/css
 
 default: _site
 
-%/slides.html: %/*.md Makefile
+%/slides.html: %/*.md
 	cat $^ | $(PANDOC) $(PANDOCARGS) -o $@
 
 %.png: %.py Makefile
@@ -26,8 +26,12 @@ default: _site
 %.html: %.ipynb Makefile jekyll.tpl
 	ipython nbconvert --to html  --ExecutePreprocessor.timeout=120 --template jekyll.tpl --execute --stdout $< > $@
 
-%.html: %.ipyhtml Makefile
-	yamlheader 
+combined.ipynb: notebooks/*.ipynb
+	python nbmerge.py $^ $@
+
+notes.pdf: combined.ipynb Makefile
+	ipython nbconvert --to pdf --ExecutePreprocessor.timeout=120 --template report --execute $<
+	mv combined.pdf notes.pdf
 
 master.zip: Makefile
 	rm -f master.zip
