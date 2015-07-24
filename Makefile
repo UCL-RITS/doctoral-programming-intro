@@ -21,7 +21,7 @@ combined.ipynb: $(EXECUTED)
 	ipython nbconvert --to notebook --nbformat 2 --stdout $< > $@
 
 notes.pdf: combined.ipynb Makefile
-	ipython nbconvert --to pdf --template report  $<
+	ipython nbconvert --to pdf --template latex.tplx $<
 	mv combined.pdf notes.pdf
 
 master.zip: Makefile
@@ -44,7 +44,7 @@ indigo: indigo-jekyll-master
 
 .PHONY: ready
 
-ready: indigo $(HTMLS)
+ready: indigo $(HTMLS) notes.pdf
 	
 _site: ready
 	jekyll build	
