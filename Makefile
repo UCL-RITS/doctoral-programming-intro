@@ -24,6 +24,9 @@ notes.pdf: combined.ipynb Makefile
 	ipython nbconvert --to pdf --template latex.tplx $<
 	mv combined.pdf notes.pdf
 
+notebooks.zip: ${NBV2}
+	zip -r notebooks $^
+
 master.zip: Makefile
 	rm -f master.zip
 	wget https://github.com/UCL-RITS/indigo-jekyll/archive/master.zip
@@ -44,7 +47,7 @@ indigo: indigo-jekyll-master
 
 .PHONY: ready
 
-ready: indigo $(HTMLS) notes.pdf
+ready: indigo $(HTMLS) notes.pdf notebooks.zip
 	
 _site: ready
 	jekyll build	
@@ -61,4 +64,21 @@ clean:
 	rm -f notes.pdf
 	rm -rf combined*
 	rm -rf images js css _includes _layouts favicon* master.zip indigo-jekyll-master
-
+	rm -f indigo
+	rm -f notebooks/boids_1.mp4
+	rm -f notebooks/draw_eight.py
+	rm -f notebooks/eight
+	rm -f notebooks/eight.py
+	rm -rf notebooks/greengraph/
+	rm -f notebooks/maze.json
+	rm -f notebooks/maze.yaml
+	rm -rf notebooks/mazetool/
+	rm -f notebooks/my_graph.png
+	rm -f notebooks/mydata.txt
+	rm -f notebooks/myfile.json
+	rm -f notebooks/myfile.yaml
+	rm -f notebooks/mywrittenfile
+	rm -f notebooks.zip
+	rm -f notebooks/*.pyc
+	rm -rf notebooks/maze
+	rm -rf notebooks/data
