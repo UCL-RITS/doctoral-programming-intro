@@ -1,7 +1,7 @@
 contact: http://www.ucl.ac.uk/research-it-services/partner-with-us
 
-title: "An introduction to research programming with python"
-short: PROGRAMMING
+title: "An introduction to research programming with Python"
+short: Programming
 
 defaults:
   - scope: {path: ""}
