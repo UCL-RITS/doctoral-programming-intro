@@ -15,7 +15,7 @@ combined.ipynb: $(EXECUTED)
 	python nbmerge.py $^ $@
 
 %.nbconvert.ipynb: %.ipynb
-	ipython nbconvert --to notebook --ExecutePreprocessor.timeout=120 --execute --stdout $< > $@
+	ipython nbconvert --to notebook --allow-errors --ExecutePreprocessor.timeout=120 --execute --stdout $< > $@
 
 %.v2.ipynb: %.nbconvert.ipynb
 	ipython nbconvert --to notebook --nbformat 2 --stdout $< > $@
@@ -48,9 +48,9 @@ indigo: indigo-jekyll-master
 .PHONY: ready
 
 ready: indigo $(HTMLS) notes.pdf notebooks.zip
-	
+
 _site: ready
-	jekyll build	
+	jekyll build
 
 preview: ready
 	jekyll serve
