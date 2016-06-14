@@ -19,7 +19,7 @@ crumbs:
   - link: http://development.rc.ucl.ac.uk/training
     text: MATERIALS
 
-baseurl: /training/introductory
+baseurl: /doctoral-programming-intro
 
 markdown: redcarpet
 redcarpet:
