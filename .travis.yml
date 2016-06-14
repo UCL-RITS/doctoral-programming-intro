@@ -12,6 +12,7 @@ addons:
     - texlive-latex-extra
     - texlive-fonts-recommended
     - texlive-latex-recommended
+    - texlive-generic-recommended
     - texlive-xetex
     - latex-xcolor
 install:
