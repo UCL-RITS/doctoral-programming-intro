@@ -7,9 +7,14 @@ Introduction
 
 In this course, we will introduce programming for researchers who handle data.
 
-This is **not** an advanced course.
+This is **not** an advanced course. The fundamental ideas of programming will
+be introduced for the first time.
 
-The fundamental ideas of programming will be introduced for the first time.
+However, **it is a course for graduate students** -- the content will be covered
+sufficiently fast that we can reach a point where
+you will be able to apply this knowledge to your
+research at the end of the course, and we will not try to hide away the
+niggling details that you will encounter in real programming.
 
 Topics Covered
 -------------
@@ -79,7 +84,7 @@ Supervised Learning
 
 We regularly run face-to-face instances of this course.
 
-These course takes a "flipped classroom" approach to teaching:
+These course takes, in part, a "flipped classroom" approach to teaching:
 
 In the olden days, before the internet, lectures were a "broadcast" medium: a way of getting
 information from the lecturer's notebook into students' notebooks.
