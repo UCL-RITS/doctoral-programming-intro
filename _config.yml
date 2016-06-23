@@ -1,7 +1,7 @@
 contact: http://www.ucl.ac.uk/research-it-services/partner-with-us
 
-title: "An introduction to research programming with python"
-short: Python
+title: "An introduction to research programming with Python"
+short: Programming
 
 defaults:
   - scope: {path: ""}
@@ -11,7 +11,7 @@ crumbs:
   - link: http://www.ucl.ac.uk/ISD
     text: ISD
   - link: http://www.ucl.ac.uk/isd/services
-    text: Our services
+    text: Our Services
   - link: http://www.ucl.ac.uk/isd/services/research-it
     text: Research IT
   - link: http://www.ucl.ac.uk/isd/services/research-it/training
