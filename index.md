@@ -47,7 +47,7 @@ In the UCL Cluster Rooms
 * Log in with your UCL Userid and password
 * Using the start menu, go to "Applications A-B"
 * Choose "Anaconda 64 bit"
-* Choose IPython 2.7 Notebook
+* Choose "Jupyter Notebook"
 
 On your own machine
 ------------------
@@ -55,13 +55,15 @@ On your own machine
 If you can, we recommend using your own laptop to follow these notes, as the tools will
 then be ready for use in your research.
 
-You can follow the [IPython installation instructions](http://ipython.org/install.html).
-Of the available options, we recommend the [Anaconda](http://continuum.io/downloads) distribution for beginners.
+You can follow the [Jupyter installation instructions](http://jupyter.readthedocs.io/en/latest/install.html).
+Of the available options, we recommend the [Anaconda](http://continuum.io/downloads) distribution which
+includes Jupyter and all the scientific python ecosystem that we will use. Choose the Python 3.5 option and
+follow the instructions on the Anaconda site.
 
 Downloading the materials
 -----------------------
 
-You will want to download the [Ipython Notebooks for this course](notebooks.zip), and unzip them into
+You will want to download the [Jupyter Notebooks for this course](notebooks.zip), and unzip them into
 an appropriate folder, so you can find them when you launch the notebook
 
 PDF Handout
@@ -120,7 +122,7 @@ Guidance to Teachers
 
 If you find these notes on the internet, and want to teach them yourself, feel free to do so.
 
-We don't provide slides; the assumption is you will use the IPython notebooks directly on the projector.
+We don't provide slides; the assumption is you will use the Jupyter notebooks directly on the projector.
 We find students *believe us more* when they see code executed on-the-fly.
 
 If you find mistakes, or have suggestions to improve the material, please send us a pull request
