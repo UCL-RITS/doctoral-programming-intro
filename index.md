@@ -36,7 +36,7 @@ Alternatives
 -----------
 
 If you're already comfortable, with variables, loops, and functions, this course is not for you!
-You should join us instead for [MPHYG001: Research Software Engineering with Python](http://rits.github-pages.ucl.ac.uk/rsd-engineeringcourse/)
+You should join us instead for [MPHYG001: Research Software Engineering with Python](http://github-pages.ucl.ac.uk/rsd-engineeringcourse/)
 
 What you need for the course
 ===============
