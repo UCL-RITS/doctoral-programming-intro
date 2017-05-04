@@ -26,15 +26,17 @@ script:
 - python -c "import matplotlib.pyplot"
 - make
 before_install:
-- openssl aes-256-cbc -K $encrypted_4014292b586d_key -iv $encrypted_4014292b586d_iv
-  -in secrets.tar.enc -out secrets.tar -d
+- ls
+- openssl version
+- echo $encrypted_4014292b586d_iv -K $encrypted_4014292b586d_key
+- openssl aes-256-cbc -K $encrypted_4014292b586d_key -iv $encrypted_4014292b586d_iv -in secrets.tar.enc -out secrets.tar -d
+after_success:
 - tar -xvf secrets.tar
 - REPO=`git config remote.origin.url`
 - SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 - eval `ssh-agent -s`
 - chmod 600 deploy_key
 - ssh-add deploy_key
-after_success:
 - cd _site
 - git init
 - git checkout -b gh-pages
