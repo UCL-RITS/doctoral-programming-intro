@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # From https://gist.github.com/fperez/e2bbc0a208e82e450f69
-# Note, updated version of 
+# Note, updated version of
 # https://github.com/ipython/ipython-in-depth/blob/master/tools/nbmerge.py
 """
 usage:
@@ -9,10 +9,10 @@ python nbmerge.py A.ipynb B.ipynb C.ipynb > merged.ipynb
 from __future__ import print_function
 
 import io
-import os
 import sys
 
-from IPython import nbformat
+import nbformat
+
 
 def merge_notebooks(filenames, outfile):
     merged = None
@@ -29,9 +29,10 @@ def merge_notebooks(filenames, outfile):
     if not hasattr(merged.metadata, 'name'):
         merged.metadata.name = ''
     merged.metadata.name += "_merged"
-    result=nbformat.writes(merged)
+    result = nbformat.writes(merged)
     with io.open(outfile, 'w', encoding='utf-8') as out:
         out.write(result)
+
 
 if __name__ == '__main__':
     notebooks = sys.argv[1:-1]

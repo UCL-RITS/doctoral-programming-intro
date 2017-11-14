@@ -9,19 +9,19 @@ NBV2=$(NOTEBOOKS:.ipynb=.v2.ipynb)
 default: _site
 
 %.html: %.nbconvert.ipynb Makefile jekyll.tpl
-	ipython nbconvert --to html  --template jekyll.tpl --stdout $< > $@
+	jupyter nbconvert --to html  --template jekyll.tpl --stdout $< > $@
 
 combined.ipynb: $(EXECUTED)
 	python nbmerge.py $^ $@
 
 %.nbconvert.ipynb: %.ipynb
-	ipython nbconvert --to notebook --allow-errors --ExecutePreprocessor.timeout=120 --execute --stdout $< > $@
+	jupyter nbconvert --to notebook --allow-errors --ExecutePreprocessor.timeout=120 --execute --stdout $< > $@
 
 %.v2.ipynb: %.nbconvert.ipynb
-	ipython nbconvert --to notebook --nbformat 2 --stdout $< > $@
+	jupyter nbconvert --to notebook --nbformat 2 --stdout $< > $@
 
 notes.pdf: combined.ipynb Makefile
-	ipython nbconvert --to pdf --template latex.tplx $<
+	jupyter nbconvert --to pdf --template latex.tplx $<
 	mv combined.pdf notes.pdf
 
 notebooks.zip: ${NBV2}
