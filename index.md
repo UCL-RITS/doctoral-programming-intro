@@ -46,8 +46,8 @@ In the UCL Cluster Rooms
 
 * Log in with your UCL Userid and password
 * Using the start menu, go to "Applications A-B"
-* Choose "Anaconda 64 bit"
-* Choose "Jupyter Notebook"
+* Choose "Anaconda3 64 bit"
+* Choose Jupyter Notebook
 
 On your own machine
 ------------------
@@ -55,9 +55,9 @@ On your own machine
 If you can, we recommend using your own laptop to follow these notes, as the tools will
 then be ready for use in your research.
 
-You can follow the [Jupyter installation instructions](http://jupyter.readthedocs.io/en/latest/install.html).
+You can follow the [Jupyter installation instructions](http://jupyter.org/install.html).
 Of the available options, we recommend the [Anaconda](http://continuum.io/downloads) distribution which
-includes Jupyter and all the scientific python ecosystem that we will use. Choose the Python 3.5 option and
+includes Jupyter and all the scientific python ecosystem that we will use. Choose the Python 3.6 option and
 follow the instructions on the Anaconda site.
 
 Downloading the materials
