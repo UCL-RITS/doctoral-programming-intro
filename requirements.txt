@@ -1,0 +1,15 @@
+jupyter
+numpy
+scipy
+pandas
+nose
+mako
+cython
+pyzmq
+matplotlib
+geopy
+matplotlib-venn
+pypng
+sphinx
+numpydoc
+requests

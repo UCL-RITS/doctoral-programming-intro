@@ -1,0 +1,414 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>An introduction to programming for research using python</title>
+
+  <link href="/doctoral-programming-intro/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/doctoral-programming-intro/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/doctoral-programming-intro/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/doctoral-programming-intro/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/doctoral-programming-intro/favicon-144.png">
+
+  <script src="/doctoral-programming-intro/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/doctoral-programming-intro/js/lib/html5shiv-printshiv.min.js', '/doctoral-programming-intro/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/doctoral-programming-intro/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/doctoral-programming-intro/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/doctoral-programming-intro/js/lib/require.min.js"></script>
+    <script src="/doctoral-programming-intro/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/doctoral-programming-intro/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">An introduction to research programming with Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+
+
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/doctoral-programming-intro/notebooks/">Course Content</a><ul><li class="inactive"> <a href="/doctoral-programming-intro/notebooks/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/023types.html">Types</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/038SolutionComprehension.html">Maze comprehension solution.</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/04functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/050import.html">Modules</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/060files.html">Working with files</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/061internet.html">Internet</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/062csv.html">CSV</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/064JsonYamlXML.html">Structured Datafiles</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/065MazeSaved.html">Maze Files Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/066QuakeExercise.html">Earthquakes Exercise</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/068QuakesSolution.html">Quakes Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/072plotting.html">Plotting</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/082NumPy.html">Numerical Python</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/084Boids.html">The Boids</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/091Libraries.html">Installing Libraries</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/101Classes.html">Classes</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/103WritingLibraries.html">Writing Libraries</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/110Capstone.html">Understanding the Exemplar</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/notebooks/120Counting.html"></a> </li> </ul> </li> 
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/doctoral-programming-intro/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          
+            <nav class="breadcrumb clearfix">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/ISD">ISD</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services">Our Services</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it">Research IT</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it/training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/doctoral-programming-intro/">Programming</a></li>
+
+
+
+              </ul>
+            </nav>
+           <div class="site-content__main">
+            
+            
+          
+          
+
+    <h1>Introduction</h1>
+
+<p>In this course, we will introduce programming for researchers who handle data.</p>
+
+<p>This is <strong>not</strong> an advanced course. The fundamental ideas of programming will
+be introduced for the first time.</p>
+
+<p>However, <strong>it is a course for graduate students</strong> -- the content will be covered
+sufficiently fast that we can reach a point where
+you will be able to apply this knowledge to your
+research at the end of the course, and we will not try to hide away the
+niggling details that you will encounter in real programming.</p>
+
+<h2>Topics Covered</h2>
+
+<ul>
+<li>Fundamental Python language syntax</li>
+<li>The IPython Notebook</li>
+<li>Data structures with lists and dictionaries</li>
+<li>Classes</li>
+<li>Files and the filesystem</li>
+<li>Parsing CSV data</li>
+<li>JSON and YAML</li>
+<li>Getting data from the internet</li>
+<li>Introducing Matplotlib</li>
+<li>Matplotlib animations</li>
+<li>Introducing NumPy</li>
+<li>Creating packages</li>
+</ul>
+
+<h2>Alternatives</h2>
+
+<p>If you&#39;re already comfortable, with variables, loops, and functions, this course is not for you!
+You should join us instead for <a href="http://github-pages.ucl.ac.uk/rsd-engineeringcourse/">MPHYG001: Research Software Engineering with Python</a></p>
+
+<h1>What you need for the course</h1>
+
+<h2>In the UCL Cluster Rooms</h2>
+
+<ul>
+<li>Log in with your UCL Userid and password</li>
+<li>Using the start menu, go to &quot;Applications A-B&quot;</li>
+<li>Choose &quot;Anaconda3 64 bit&quot;</li>
+<li>Choose Jupyter Notebook</li>
+</ul>
+
+<h2>On your own machine</h2>
+
+<p>If you can, we recommend using your own laptop to follow these notes, as the tools will
+then be ready for use in your research.</p>
+
+<p>You can follow the <a href="http://jupyter.org/install.html">Jupyter installation instructions</a>.
+Of the available options, we recommend the <a href="http://continuum.io/downloads">Anaconda</a> distribution which
+includes Jupyter and all the scientific python ecosystem that we will use. Choose the Python 3.6 option and
+follow the instructions on the Anaconda site.</p>
+
+<h2>Downloading the materials</h2>
+
+<p>You will want to download the <a href="notebooks.zip">Jupyter Notebooks for this course</a>, and unzip them into
+an appropriate folder, so you can find them when you launch the notebook</p>
+
+<h2>PDF Handout</h2>
+
+<p>You will also find the lecture notes useful in <a href="notes.pdf">printable format</a></p>
+
+<h1>Following this course</h1>
+
+<h2>Self-supported Learning</h2>
+
+<p>You can follow this course at your own pace at any time. If you need help, please contact
+rc-softdev@ucl.ac.uk and we will try to help you, though if you need a lot of help, you&#39;ll
+be better off coming to an organised instance.</p>
+
+<h2>Supervised Learning</h2>
+
+<p>We regularly run face-to-face instances of this course.</p>
+
+<p>These course takes, in part, a &quot;flipped classroom&quot; approach to teaching:</p>
+
+<p>In the olden days, before the internet, lectures were a &quot;broadcast&quot; medium: a way of getting
+information from the lecturer&#39;s notebook into students&#39; notebooks.</p>
+
+<p>Work inside the classroom was used for sharing theory, and homework outside the classroom was used for exercises.</p>
+
+<p>In a world with an internet, this makes less sense.</p>
+
+<p>We have provided online notes to cover the materials you need to know, and you can study these in your own time.</p>
+
+<p>Class time can then be used as a forum, to discuss confusing aspects of the materials, work on exercises
+with help from experienced teachers.</p>
+
+<p>To learn more about the flipped classroom, see the talk by <a href="http://ed.ted.com/on/HXvovdK8">Lorena Barba</a></p>
+
+<p>I learned about the approach at <a href="https://www.youtube.com/watch?v=TWxwKDT88GU">SciPy 2014</a> (The best bit starts at 11:00)</p>
+
+<h2>Supplementary materials</h2>
+
+<p>In the past, lecture notes have been treated as a standalone textbook, assuming students need to be able to learn
+(and pass exams) without access to any other materials. In a world with an internet, this is clearly wrong.
+This course recognises that you <em>will</em> be googling for supplementary learning materials, and encourages that.
+The problem is that the internet is full of materials of varying quality, and attempting to absorb it all
+can leave learners even more confused.</p>
+
+<p>Thus, good lecture notes should act as a scaffold or backbone to external materials: offering links to
+the best of the web, and ordering and structuring these. We&#39;ve therefore often added links to
+other notes on the web.</p>
+
+<h1>Guidance to Teachers</h1>
+
+<p>If you find these notes on the internet, and want to teach them yourself, feel free to do so.</p>
+
+<p>We don&#39;t provide slides; the assumption is you will use the Jupyter notebooks directly on the projector.
+We find students <em>believe us more</em> when they see code executed on-the-fly.</p>
+
+<p>If you find mistakes, or have suggestions to improve the material, please send us a pull request
+on <a href="https://github.com/UCL-RITS/doctoral-programming-intro">GitHub</a></p>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2017-11-24 17:24:07 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/doctoral-programming-intro/js/lib/require.min.js"></script>
+  <script src="/doctoral-programming-intro/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+

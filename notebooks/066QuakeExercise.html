@@ -1,0 +1,1284 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>Earthquakes Exercise</title>
+
+  <link href="/doctoral-programming-intro/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/doctoral-programming-intro/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/doctoral-programming-intro/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/doctoral-programming-intro/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/doctoral-programming-intro/favicon-144.png">
+
+  <script src="/doctoral-programming-intro/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/doctoral-programming-intro/js/lib/html5shiv-printshiv.min.js', '/doctoral-programming-intro/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/doctoral-programming-intro/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/doctoral-programming-intro/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/doctoral-programming-intro/js/lib/require.min.js"></script>
+    <script src="/doctoral-programming-intro/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/doctoral-programming-intro/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">An introduction to research programming with Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+
+
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/doctoral-programming-intro/notebooks/">Course Content</a><ul><li class="active"> <a href="/doctoral-programming-intro/notebooks/00pythons.html">Many kinds of Python</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/010exemplar.html">An example program</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/015variables.html">Variables</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/016using_functions.html">Using Functions</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/023types.html">Types</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/025containers.html">Containers</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/028dictionaries.html">Dictionaries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/029structures.html">Structures</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/030MazeSolution.html">Maze Solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/032conditionality.html">Conditionality</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/035looping.html">Looping</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/037comprehensions.html">Comprehensions</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/038SolutionComprehension.html">Maze comprehension solution.</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/04functions.html">Defining functions</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/050import.html">Modules</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/060files.html">Working with files</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/061internet.html">Internet</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/062csv.html">CSV</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/064JsonYamlXML.html">Structured Datafiles</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/065MazeSaved.html">Maze Files Solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/066QuakeExercise.html">Earthquakes Exercise</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/068QuakesSolution.html">Quakes Solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/072plotting.html">Plotting</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/082NumPy.html">Numerical Python</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/084Boids.html">The Boids</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/091Libraries.html">Installing Libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/101Classes.html">Classes</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/103WritingLibraries.html">Writing Libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/110Capstone.html">Understanding the Exemplar</a> </li> <li class="active"> <a href="/doctoral-programming-intro/notebooks/120Counting.html"></a> </li> </ul> </li> 
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/doctoral-programming-intro/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          
+            <nav class="breadcrumb clearfix">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/ISD">ISD</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services">Our Services</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it">Research IT</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it/training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/doctoral-programming-intro/">Programming</a></li>
+
+
+
+              </ul>
+            </nav>
+           <div class="site-content__main">
+            
+               <div id="slidelink">
+                 <a href="/doctoral-programming-intro/notebooks/066QuakeExercise.ipynb">Notebook download</a>
+               </div>
+            
+            
+          
+          
+
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Extended-Exercise:-the-biggest-Earthquake-in-the-UK-this-Century">Extended Exercise: the biggest Earthquake in the UK this Century<a class="anchor-link" href="#Extended-Exercise:-the-biggest-Earthquake-in-the-UK-this-Century">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-Problem">The Problem<a class="anchor-link" href="#The-Problem">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GeoJSON is a json-based file format for sharing geographic data. One example dataset is the USGS earthquake data:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">quakes</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://earthquake.usgs.gov/fdsnws/event/1/query.geojson&quot;</span><span class="p">,</span>
+                    <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;starttime&#39;</span><span class="p">:</span><span class="s2">&quot;2000-01-01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxlatitude&quot;</span><span class="p">:</span><span class="s2">&quot;58.723&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minlatitude&quot;</span><span class="p">:</span><span class="s2">&quot;50.008&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;maxlongitude&quot;</span><span class="p">:</span><span class="s2">&quot;1.67&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minlongitude&quot;</span><span class="p">:</span><span class="s2">&quot;-9.756&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;minmagnitude&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;endtime&quot;</span><span class="p">:</span><span class="s2">&quot;2015-11-22&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;orderby&quot;</span><span class="p">:</span><span class="s2">&quot;time-asc&quot;</span><span class="p">}</span>
+                   <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;{&#34;type&#34;:&#34;FeatureCollection&#34;,&#34;metadata&#34;:{&#34;generated&#34;:1511543774000,&#34;url&#34;:&#34;https://earthquake.usgs.gov&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Your exercise: determine the location of the largest magnitude earthquake in the UK this century.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You'll need to:</p>
+<ul>
+<li>Get the text of the web result</li>
+<li>Parse the data as JSON</li>
+<li>Understand how the data is structured into dictionaries and lists<ul>
+<li>Where is the magnitude?</li>
+<li>Where is the place description or coordinates?</li>
+</ul>
+</li>
+<li>Program a search through all the quakes to find the biggest quake.</li>
+<li>Find the place of the biggest quake</li>
+<li>Form a URL for Google Maps at that latitude and longitude: look back at the introductory example</li>
+<li>Display that image</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Response [200]&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">quakes</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>str</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">quakes</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;type&#39;, &#39;metadata&#39;, &#39;features&#39;, &#39;bbox&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;type&#39;, &#39;properties&#39;, &#39;geometry&#39;, &#39;id&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;mag&#39;, &#39;place&#39;, &#39;time&#39;, &#39;updated&#39;, &#39;tz&#39;, &#39;url&#39;, &#39;detail&#39;, &#39;felt&#39;, &#39;cdi&#39;, &#39;mmi&#39;, &#39;alert&#39;, &#39;status&#39;, &#39;tsunami&#39;, &#39;sig&#39;, &#39;net&#39;, &#39;code&#39;, &#39;ids&#39;, &#39;sources&#39;, &#39;types&#39;, &#39;nst&#39;, &#39;dmin&#39;, &#39;rms&#39;, &#39;gap&#39;, &#39;magType&#39;, &#39;type&#39;, &#39;title&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;coordinates&#39;: [-2.81, 54.77, 14], &#39;type&#39;: &#39;Point&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-2.81</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">quake</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This quake has magnitude&quot;</span><span class="p">,</span> <span class="n">quake</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; ... and is at longitude&quot;</span><span class="p">,</span><span class="n">quake</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; ... and latitude&quot;</span><span class="p">,</span> <span class="n">quake</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This quake has magnitude 2.6
+ ... and is at longitude -2.81
+ ... and latitude 54.77
+
+This quake has magnitude 4
+ ... and is at longitude -1.61
+ ... and latitude 52.28
+
+This quake has magnitude 4
+ ... and is at longitude 1.564
+ ... and latitude 53.236
+
+This quake has magnitude 3.3
+ ... and is at longitude 0.872
+ ... and latitude 58.097
+
+This quake has magnitude 2.9
+ ... and is at longitude -1.845
+ ... and latitude 51.432
+
+This quake has magnitude 2.9
+ ... and is at longitude -3.639
+ ... and latitude 55.102
+
+This quake has magnitude 4
+ ... and is at longitude -4.684
+ ... and latitude 50.995
+
+This quake has magnitude 2.6
+ ... and is at longitude 1.144
+ ... and latitude 51.76
+
+This quake has magnitude 2.6
+ ... and is at longitude 1.094
+ ... and latitude 51.332
+
+This quake has magnitude 3.5
+ ... and is at longitude -3.205
+ ... and latitude 51.552
+
+This quake has magnitude 2.5
+ ... and is at longitude -3.25
+ ... and latitude 51.7
+
+This quake has magnitude 4.2
+ ... and is at longitude -0.856
+ ... and latitude 52.846
+
+This quake has magnitude 3
+ ... and is at longitude -3.14
+ ... and latitude 51.63
+
+This quake has magnitude 3.4
+ ... and is at longitude 1.288
+ ... and latitude 53.168
+
+This quake has magnitude 3.5
+ ... and is at longitude -3.255
+ ... and latitude 51.7
+
+This quake has magnitude 3.4
+ ... and is at longitude -3.081
+ ... and latitude 51.567
+
+This quake has magnitude 3
+ ... and is at longitude -0.009
+ ... and latitude 50.048
+
+This quake has magnitude 2.3
+ ... and is at longitude -5.749
+ ... and latitude 56.596
+
+This quake has magnitude 2.1
+ ... and is at longitude -3.588
+ ... and latitude 51.713
+
+This quake has magnitude 4.8
+ ... and is at longitude -2.15
+ ... and latitude 52.52
+
+This quake has magnitude 3.2
+ ... and is at longitude -2.136
+ ... and latitude 52.522
+
+This quake has magnitude 1.2
+ ... and is at longitude -2.138
+ ... and latitude 52.521
+
+This quake has magnitude 3.7
+ ... and is at longitude -2
+ ... and latitude 53.475
+
+This quake has magnitude 4.3
+ ... and is at longitude -2.219
+ ... and latitude 53.478
+
+This quake has magnitude 2.9
+ ... and is at longitude -2.219
+ ... and latitude 53.463
+
+This quake has magnitude 3.5
+ ... and is at longitude -2.146
+ ... and latitude 53.473
+
+This quake has magnitude 3.3
+ ... and is at longitude -2.157
+ ... and latitude 53.477
+
+This quake has magnitude 3.8
+ ... and is at longitude -2.179
+ ... and latitude 53.485
+
+This quake has magnitude 2.8
+ ... and is at longitude -2.197
+ ... and latitude 53.482
+
+This quake has magnitude 2.5
+ ... and is at longitude -2.204
+ ... and latitude 53.481
+
+This quake has magnitude 2.5
+ ... and is at longitude -2.213
+ ... and latitude 53.488
+
+This quake has magnitude 2.6
+ ... and is at longitude -2.188
+ ... and latitude 53.477
+
+This quake has magnitude 3.1
+ ... and is at longitude -2.198
+ ... and latitude 53.481
+
+This quake has magnitude 2.3
+ ... and is at longitude 1.582
+ ... and latitude 51.055
+
+This quake has magnitude 3
+ ... and is at longitude -4.416
+ ... and latitude 56.169
+
+This quake has magnitude 2.8
+ ... and is at longitude -4.439
+ ... and latitude 56.181
+
+This quake has magnitude 2.5
+ ... and is at longitude -4.427
+ ... and latitude 56.167
+
+This quake has magnitude 3.2
+ ... and is at longitude -1.013
+ ... and latitude 53.481
+
+This quake has magnitude 3.3
+ ... and is at longitude -2.98
+ ... and latitude 51.089
+
+This quake has magnitude 3.6
+ ... and is at longitude -2.98
+ ... and latitude 51.089
+
+This quake has magnitude 3.7
+ ... and is at longitude -2.98
+ ... and latitude 51.089
+
+This quake has magnitude 3.4
+ ... and is at longitude -1.999
+ ... and latitude 53.566
+
+This quake has magnitude 2.7
+ ... and is at longitude 0.765
+ ... and latitude 58.146
+
+This quake has magnitude 3
+ ... and is at longitude -0.602
+ ... and latitude 53.936
+
+This quake has magnitude 3.8
+ ... and is at longitude -3.853
+ ... and latitude 53.265
+
+This quake has magnitude 2.6
+ ... and is at longitude -2.055
+ ... and latitude 53.092
+
+This quake has magnitude 2.9
+ ... and is at longitude -0.392
+ ... and latitude 51.008
+
+This quake has magnitude 3
+ ... and is at longitude -5.224
+ ... and latitude 56.839
+
+This quake has magnitude 2.4
+ ... and is at longitude -0.395
+ ... and latitude 51.772
+
+This quake has magnitude 3.2
+ ... and is at longitude -5.641
+ ... and latitude 53.001
+
+This quake has magnitude 2.7
+ ... and is at longitude -5.685
+ ... and latitude 56.68
+
+This quake has magnitude 2.4
+ ... and is at longitude -5.662
+ ... and latitude 56.668
+
+This quake has magnitude 1.7
+ ... and is at longitude -3.736
+ ... and latitude 56.245
+
+This quake has magnitude 2.5
+ ... and is at longitude -3.761
+ ... and latitude 56.277
+
+This quake has magnitude 2.6
+ ... and is at longitude -1.22
+ ... and latitude 51.31
+
+This quake has magnitude 1.9
+ ... and is at longitude -5.233
+ ... and latitude 56.676
+
+This quake has magnitude 2.9
+ ... and is at longitude -5.642
+ ... and latitude 57.531
+
+This quake has magnitude 2.5
+ ... and is at longitude -2.988
+ ... and latitude 51.094
+
+This quake has magnitude 2.7
+ ... and is at longitude -3.032
+ ... and latitude 52.031
+
+This quake has magnitude 1.4
+ ... and is at longitude -5.251
+ ... and latitude 56.705
+
+This quake has magnitude 2.7
+ ... and is at longitude -2.569
+ ... and latitude 52.352
+
+This quake has magnitude 2.8
+ ... and is at longitude -4.512
+ ... and latitude 50.346
+
+This quake has magnitude 3.6
+ ... and is at longitude -3.634
+ ... and latitude 55.085
+
+This quake has magnitude 3.6
+ ... and is at longitude 0.998
+ ... and latitude 53.666
+
+This quake has magnitude 1.3
+ ... and is at longitude -5.624
+ ... and latitude 56.942
+
+This quake has magnitude 1.7
+ ... and is at longitude -1.254
+ ... and latitude 53.458
+
+This quake has magnitude 1.4
+ ... and is at longitude -1.248
+ ... and latitude 53.461
+
+This quake has magnitude 1.7
+ ... and is at longitude -1.225
+ ... and latitude 53.453
+
+This quake has magnitude 1.2
+ ... and is at longitude -1.239
+ ... and latitude 53.461
+
+This quake has magnitude 1.6
+ ... and is at longitude -1.23
+ ... and latitude 53.46
+
+This quake has magnitude 1.3
+ ... and is at longitude -1.212
+ ... and latitude 53.476
+
+This quake has magnitude 1.4
+ ... and is at longitude -1.223
+ ... and latitude 53.453
+
+This quake has magnitude 4.6
+ ... and is at longitude 1.009
+ ... and latitude 51.085
+
+This quake has magnitude 2.6
+ ... and is at longitude -0.957
+ ... and latitude 52.801
+
+This quake has magnitude 2.5
+ ... and is at longitude -2.185
+ ... and latitude 53.488
+
+This quake has magnitude 2.2
+ ... and is at longitude -2.178
+ ... and latitude 53.482
+
+This quake has magnitude 2.3
+ ... and is at longitude 1.415
+ ... and latitude 51.399
+
+This quake has magnitude 2.3
+ ... and is at longitude -3.206
+ ... and latitude 55.804
+
+This quake has magnitude 3.3
+ ... and is at longitude -3.277
+ ... and latitude 52.866
+
+This quake has magnitude 2.3
+ ... and is at longitude -3.221
+ ... and latitude 55.788
+
+This quake has magnitude 3.1
+ ... and is at longitude 1.032
+ ... and latitude 58.204
+
+This quake has magnitude 4.8
+ ... and is at longitude -0.332
+ ... and latitude 53.403
+
+This quake has magnitude 2.8
+ ... and is at longitude -6.04
+ ... and latitude 50.382
+
+This quake has magnitude 3.1
+ ... and is at longitude -0.351
+ ... and latitude 53.357
+
+This quake has magnitude 2.5
+ ... and is at longitude -2.952
+ ... and latitude 54.691
+
+This quake has magnitude 1.5
+ ... and is at longitude -2.574
+ ... and latitude 53.38
+
+This quake has magnitude 3.5
+ ... and is at longitude -5.557
+ ... and latitude 56.829
+
+This quake has magnitude 3.9
+ ... and is at longitude -2.512
+ ... and latitude 52.212
+
+This quake has magnitude 2.7
+ ... and is at longitude 1.18
+ ... and latitude 50.44
+
+This quake has magnitude 3.5
+ ... and is at longitude 1.178
+ ... and latitude 51.116
+
+This quake has magnitude 3
+ ... and is at longitude -0.252
+ ... and latitude 53.687
+
+This quake has magnitude 3.7
+ ... and is at longitude -3.017
+ ... and latitude 54.167
+
+This quake has magnitude 3.5
+ ... and is at longitude -3.146
+ ... and latitude 54.39
+
+This quake has magnitude 3.6
+ ... and is at longitude -1.652
+ ... and latitude 54.169
+
+This quake has magnitude 3.5
+ ... and is at longitude -5.784
+ ... and latitude 56.822
+
+This quake has magnitude 2.7
+ ... and is at longitude -3.734
+ ... and latitude 50.571
+
+This quake has magnitude 3.9
+ ... and is at longitude -0.743
+ ... and latitude 50.122
+
+This quake has magnitude 2.9
+ ... and is at longitude -1.25
+ ... and latitude 52.801
+
+This quake has magnitude 2.3
+ ... and is at longitude -4.231
+ ... and latitude 53.125
+
+This quake has magnitude 2.9
+ ... and is at longitude -5.715
+ ... and latitude 56.776
+
+This quake has magnitude 3.8
+ ... and is at longitude -4.719
+ ... and latitude 52.883
+
+This quake has magnitude 2.8
+ ... and is at longitude -4.72
+ ... and latitude 52.879
+
+This quake has magnitude 3.2
+ ... and is at longitude -3.403
+ ... and latitude 53.887
+
+This quake has magnitude 4.1
+ ... and is at longitude -4.164
+ ... and latitude 51.363
+
+This quake has magnitude 3.5
+ ... and is at longitude -0.732
+ ... and latitude 52.722
+
+This quake has magnitude 2.6
+ ... and is at longitude -1.191
+ ... and latitude 53.057
+
+This quake has magnitude 2.9
+ ... and is at longitude -1.299
+ ... and latitude 51.072
+
+This quake has magnitude 3.8
+ ... and is at longitude -0.717
+ ... and latitude 52.727
+
+This quake has magnitude 3.7
+ ... and is at longitude 1.438
+ ... and latitude 51.304
+
+This quake has magnitude 3
+ ... and is at longitude -4.355
+ ... and latitude 53.116
+
+This quake has magnitude 2.8
+ ... and is at longitude -0.693
+ ... and latitude 52.714
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2017-11-24 17:24:07 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/doctoral-programming-intro/js/lib/require.min.js"></script>
+  <script src="/doctoral-programming-intro/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+

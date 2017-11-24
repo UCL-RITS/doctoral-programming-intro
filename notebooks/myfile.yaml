@@ -1,0 +1,6 @@
+
+somekey:
+    # Look, this is a list
+    - a list
+    - with values
+    - [1, 2, 4] # and another list of integers
