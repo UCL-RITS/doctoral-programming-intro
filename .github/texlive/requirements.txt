@@ -1,0 +1,9 @@
+pandoc
+texlive-latex-base
+texlive-latex-extra
+texlive-fonts-recommended
+texlive-latex-recommended
+texlive-generic-recommended
+texlive-xetex
+latex-xcolor
+liblapack-dev
