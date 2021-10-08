@@ -22,3 +22,7 @@ baseurl: /doctoral-programming-intro
 markdown: redcarpet
 redcarpet:
   extensions: ["strikethrough","tables"]
+exclude:
+  - vendor/
+  - Gemfile
+  - Gemfile.lock

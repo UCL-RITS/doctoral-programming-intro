@@ -47,7 +47,7 @@ indigo: indigo-jekyll-master
 
 .PHONY: ready
 
-ready: indigo $(HTMLS) notes.pdf notebooks.zip
+ready: indigo $(HTMLS) notebooks.zip
 
 _site: ready
 	jekyll build
