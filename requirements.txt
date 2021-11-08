@@ -13,3 +13,4 @@ pypng
 sphinx
 numpydoc
 requests
+imageio
