@@ -127,3 +127,8 @@ We find students *believe us more* when they see code executed on-the-fly.
 
 If you find mistakes, or have suggestions to improve the material, please send us a pull request
 on [GitHub](https://github.com/UCL-RITS/doctoral-programming-intro)
+# Licenses
+## Data used
+
+- First exemplar uses HadCRUT.5.0.1.0 data, obtained from the [Met Office's Hardcrut page](http://www.metoffice.gov.uk/hadobs/hadcrut5) on November 2021 and are © British Crown Copyright, Met Office 2020, provided under an [Open Government License](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+
