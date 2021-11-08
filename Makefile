@@ -27,27 +27,9 @@ notes.pdf: combined.ipynb Makefile
 notebooks.zip: ${NBV2}
 	zip -r notebooks $^
 
-master.zip: Makefile
-	rm -f master.zip
-	wget https://github.com/UCL-RITS/indigo-jekyll/archive/master.zip
-
-indigo-jekyll-master: master.zip
-	rm -rf indigo-jekyll-master
-	unzip master.zip
-	touch indigo-jekyll-master
-
-indigo: indigo-jekyll-master
-	cp -r indigo-jekyll-master/indigo/images .
-	cp -r indigo-jekyll-master/indigo/js .
-	cp -r indigo-jekyll-master/indigo/css .
-	cp -r indigo-jekyll-master/indigo/_includes .
-	cp -r indigo-jekyll-master/indigo/_layouts .
-	cp -r indigo-jekyll-master/indigo/favicon* .
-	touch indigo
-
 .PHONY: ready
 
-ready: indigo $(HTMLS) notebooks.zip
+ready: $(HTMLS) notebooks.zip
 
 _site: ready
 	jekyll build
@@ -63,8 +45,7 @@ clean:
 	rm -rf 0?-*/*.v2.ipynb
 	rm -f notes.pdf
 	rm -rf combined*
-	rm -rf images js css _includes _layouts favicon* master.zip indigo-jekyll-master
-	rm -f indigo
+	rm -rf images js css _includes _layouts favicon*
 	rm -f 0?-*/boids_1.mp4
 	rm -f 0?-*/draw_eight.py
 	rm -f 0?-*/eight
