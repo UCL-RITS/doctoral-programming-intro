@@ -1,4 +1,4 @@
-NOTEBOOKS=$(filter-out %.v2.ipynb %.nbconvert.ipynb,$(wildcard notebooks/*.ipynb))
+NOTEBOOKS=$(filter-out %.v2.ipynb %.nbconvert.ipynb,$(wildcard 0?-*/*.ipynb))
 
 HTMLS=$(NOTEBOOKS:.ipynb=.html)
 
@@ -56,29 +56,29 @@ preview: ready
 	jekyll serve
 
 clean:
-	rm -rf notebooks/*.html
+	rm -rf *?-*/*.html
 	rm -f index.html
 	rm -rf _site
-	rm -rf notebooks/*.nbconvert.ipynb
-	rm -rf notebooks/*.v2.ipynb
+	rm -rf 0?-*/*.nbconvert.ipynb
+	rm -rf 0?-*/*.v2.ipynb
 	rm -f notes.pdf
 	rm -rf combined*
 	rm -rf images js css _includes _layouts favicon* master.zip indigo-jekyll-master
 	rm -f indigo
-	rm -f notebooks/boids_1.mp4
-	rm -f notebooks/draw_eight.py
-	rm -f notebooks/eight
-	rm -f notebooks/eight.py
-	rm -rf notebooks/greengraph/
-	rm -f notebooks/maze.json
-	rm -f notebooks/maze.yaml
-	rm -rf notebooks/mazetool/
-	rm -f notebooks/my_graph.png
-	rm -f notebooks/mydata.txt
-	rm -f notebooks/myfile.json
-	rm -f notebooks/myfile.yaml
-	rm -f notebooks/mywrittenfile
-	rm -f notebooks.zip
-	rm -f notebooks/*.pyc
-	rm -rf notebooks/maze
-	rm -rf notebooks/data
+	rm -f 0?-*/boids_1.mp4
+	rm -f 0?-*/draw_eight.py
+	rm -f 0?-*/eight
+	rm -f 0?-*/eight.py
+	rm -rf 0?-*/greengraph/
+	rm -f 0?-*/maze.json
+	rm -f 0?-*/maze.yaml
+	rm -rf 0?-*/mazetool/
+	rm -f 0?-*/my_graph.png
+	rm -f 0?-*/mydata.txt
+	rm -f 0?-*/myfile.json
+	rm -f 0?-*/myfile.yaml
+	rm -f 0?-*/mywrittenfile
+	rm -f 0?-*.zip
+	rm -f 0?-*/*.pyc
+	rm -rf 0?-*/maze
+	rm -rf 0?-*/data

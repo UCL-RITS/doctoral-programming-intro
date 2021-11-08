@@ -19,12 +19,12 @@ niggling details that you will encounter in real programming.
 
 This course is broken into two sub-courses:
 
-* Part I
+* [Part I](01-beginner/)
   - Fundamental Python language syntax
   - The IPython Notebook
   - Data structures with lists and dictionaries
   - Files and the filesystem
-* Part II
+* [Part II](02-novice/)
   - Parsing CSV data
   - JSON and YAML
   - Getting data from the internet
