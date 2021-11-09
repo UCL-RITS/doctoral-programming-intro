@@ -3,9 +3,9 @@ title: Part II
 ---
 ## {{ page.title }}
 
-This is the second part of the Introduction to research programming with Python course
+This is the second part of the *Introduction to research programming with Python* course
 
-This course introduces the basics of creating and interacting with scientific Python libraries such as numpy, scipy and matplotlib. If you are familiar with the basics of programming (variables, loops and functions) then this course offers you the next step – how to structure your code and organise it into modules.
+This course introduces the basics of creating and interacting with scientific Python libraries such as [NumPy](https://numpy.org/, [SciPy](https://scipy.org/) and [Matplotlib](https://matplotlib.org/). If you are familiar with the basics of programming (variables, loops and functions) then this course offers you the next step – how to structure your code and organise it into modules.
 
 ### This session will cover:
 
