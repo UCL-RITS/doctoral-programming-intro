@@ -24,6 +24,8 @@ This course is broken into two sub-courses:
   - The IPython Notebook
   - Data structures with lists and dictionaries
   - Files and the filesystem
+  - Data visualisation
+
 * [Part II](02-novice/)
   - Parsing CSV data
   - JSON and YAML
