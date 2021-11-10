@@ -7,6 +7,10 @@ defaults:
   - scope: {path: ""}
     values: {layout: default}
 
+baseurl: /doctoral-programming-intro
+
+remote_theme: dpshelio/indigo-jekyll
+
 crumbs:
   - link: http://www.ucl.ac.uk/ISD
     text: ISD
@@ -17,11 +21,12 @@ crumbs:
   - link: http://www.ucl.ac.uk/isd/services/research-it/training
     text: Training
 
-baseurl: /doctoral-programming-intro
+kramdown:
+  hard_wrap: false
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["strikethrough","tables"]
+plugins:
+  - jekyll-remote-theme
+
 exclude:
   - vendor/
   - Gemfile
