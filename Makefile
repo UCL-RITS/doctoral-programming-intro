@@ -54,7 +54,7 @@ clean:
 	rm -f 0?-*/maze.json
 	rm -f 0?-*/maze.yaml
 	rm -rf 0?-*/mazetool/
-	rm -f 0?-*/my_graph.png
+	rm -f 0?-*/polynomials.svg
 	rm -f 0?-*/mydata.txt
 	rm -f 0?-*/myfile.json
 	rm -f 0?-*/myfile.yaml
