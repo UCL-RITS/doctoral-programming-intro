@@ -12,12 +12,12 @@ variables, loops, and functions; then this course is not for you.
 
 ### This session will cover:
 
-1. Fundamental Python language syntax
-2. The different ways to use Python
-3. Data structures with lists and dictionaries
-4. Repeating actions and making choices
-5. Files and the filesystem
-6. Making functions
+1. The different ways to use Python
+2. Basic Python syntax
+3. Types and data structures
+4. Control flow with conditionals and loops
+5. Structuring code with functions and libraries
+6. Working with files
 7. Basic data visualisation
     
 ### By the end of this course you will be able to:

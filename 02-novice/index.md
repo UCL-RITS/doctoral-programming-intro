@@ -9,13 +9,13 @@ This course introduces the basics of creating and interacting with scientific Py
 
 ### This session will cover:
 
-1. Installing libraries
-2. Interacting with different data files
-3. Working with files on the internet
-4. Using NumPy
-5. Understanding matplotlib
-6. Create classes
-7. Creating packages
+1. Getting data from the internet
+2. Tabular and structured data files
+3. Classes and object-oriented programming
+4. Array-based programming with NumPy
+5. Creating more complex visualisations with Matplotlib
+6. Installing Python packages
+7. Writing your own Python packages
     
 ### By the end of this course you will be able to:
 
