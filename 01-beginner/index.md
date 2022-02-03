@@ -5,10 +5,9 @@ title: Part I
 
 This is the first part of the *Introduction to research programming with Python* course.
 
-This course teaches the basics of programming using Python with the focus to use
-it for research. It’s aimed at researchers that have no experience of
-programming – in any language - before. If you're already comfortable, with
-variables, loops, and functions; then this course is not for you.
+This course teaches the basics of programming using Python with the focus to use it for research. 
+It’s aimed at researchers that have no experience of programming – in any language - before. 
+If you're already comfortable, with variables, loops, and functions; then this course is not for you.
 
 ### This session will cover:
 
