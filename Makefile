@@ -56,10 +56,11 @@ clean:
 	rm -rf 0?-*/mazetool/
 	rm -f 0?-*/polynomials.svg
 	rm -f 0?-*/mydata.txt
-	rm -f 0?-*/myfile.json
-	rm -f 0?-*/myfile.yaml
+	rm -f 0?-*/my_file.json
+	rm -f 0?-*/my_file.yaml
 	rm -f 0?-*/mywrittenfile
 	rm -f 0?-*.zip
 	rm -f 0?-*/*.pyc
 	rm -rf 0?-*/maze
 	rm -rf 0?-*/data
+	rm -f 0?-*/sunspot_data.csv
