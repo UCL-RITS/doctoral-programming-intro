@@ -25,7 +25,7 @@ notes.pdf: combined.ipynb Makefile
 	mv combined.pdf notes.pdf
 
 notebooks.zip: ${NBV2}
-	zip -r notebooks $^
+	zip -r notebooks $^ 01-beginner/data/*
 
 .PHONY: ready
 
