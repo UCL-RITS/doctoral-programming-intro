@@ -1,0 +1,1579 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>Classes</title>
+
+  <link href="/doctoral-programming-intro/assets/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/doctoral-programming-intro/assets/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/doctoral-programming-intro/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/doctoral-programming-intro/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/doctoral-programming-intro/favicon-144.png">
+
+  <script src="/doctoral-programming-intro/assets/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/doctoral-programming-intro/assets/js/lib/html5shiv-printshiv.min.js', '/doctoral-programming-intro/assets/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/doctoral-programming-intro/assets/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/doctoral-programming-intro/assets/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/doctoral-programming-intro/assets/js/lib/require.min.js"></script>
+    <script src="/doctoral-programming-intro/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/doctoral-programming-intro/assets/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">An introduction to research programming with Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+
+
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/doctoral-programming-intro/01-beginner/">Part I</a><ul> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/023types.html">Types</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/038SolutionComprehension.html">Maze comprehension solution.</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/040functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/050import.html">Modules</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/060MatplotlibPyplot.html">Plotting (i)</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/060files.html">Working with files</a> </li></ul> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/">Part II</a><ul><li class="active"> <a href="/doctoral-programming-intro/02-novice/000Exemplar.html">An example program (ii)</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/010Internet.html">Internet</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/020TabularData.html">Tabular data</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/030StructuredData.html">Structured data</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/040MazeFilesSolution.html">Maze files solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/050EarthquakesExercise.html">Earthquakes exercise</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/060EarthquakesSolution.html">Earthquakes solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/070Classes.html">Classes</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/080NumPy.html">Numerical Python</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/090MatplotlibObjectOriented.html">Plotting (ii)</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/100Boids.html">Boids</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/110InstallingLibraries.html">Installing libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/120WritingLibraries.html">Writing libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/130ExemplarReview.html">Understanding the exemplar</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/900Counting.html"></a> </li> </ul> </li>
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/doctoral-programming-intro/assets/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          
+            <nav class="breadcrumb clearfix">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/ISD">ISD</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services">Our Services</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it">Research IT</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it/training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/doctoral-programming-intro/">Programming</a></li>
+
+
+
+              </ul>
+            </nav>
+           <div class="site-content__main">
+            
+               <div id="slidelink">
+                 <a href="/doctoral-programming-intro/02-novice/070Classes.ipynb">Notebook download</a>
+               </div>
+            
+            
+          
+          
+
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Defining-your-own-classes">Defining your own classes<a class="anchor-link" href="#Defining-your-own-classes">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="User-defined-types">User defined types<a class="anchor-link" href="#User-defined-types">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <strong>class</strong> is a user-programmed Python type.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A minimal class can be defined like this:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just as with other Python types, you use the name of the type as a function to make a variable of that type:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zero</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">zero</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;int&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span> <span class="o">=</span> <span class="n">Room</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;__main__.Room at 0x7f8db0600a90&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_room</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;__main__.Room&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the jargon, we say that an <strong>object</strong> is an <strong>instance</strong> of a particular <strong>class</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Once we have an object with a type of our own devising, we can add properties at will:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Living&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_room</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Living
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The most common use of a class is to allow us to group data into an object in a way that is 
+easier to read and understand than organising data into lists and dictionaries.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">my_room</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;HELLO&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Methods">Methods<a class="anchor-link" href="#Methods">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So far, our class doesn't do much!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We define functions <strong>inside</strong> the definition of a class, in order to give them capabilities, just like the methods on built-in
+types.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">overfull</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether room is currently full beyond its capacity.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span> <span class="o">=</span> <span class="n">Room</span><span class="p">()</span>
+<span class="n">my_room</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">my_room</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span><span class="o">.</span><span class="n">overfull</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;Carol&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;Dan&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_room</span><span class="o">.</span><span class="n">overfull</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When we write methods, we always write the first function argument as <code>self</code>, to refer to the object instance itself.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Constructors">Constructors<a class="anchor-link" href="#Constructors">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Normally, though, we don't want to add data to the class attributes on the fly like that. 
+Instead, we define a <strong>constructor</strong> that converts input data into an object.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">occupants</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="n">occupants</span> <span class="c1"># Note the default argument, occupants start empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="o">=</span> <span class="n">exits</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        
+    <span class="k">def</span> <span class="nf">overfull</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether room is currently full beyond its capacity.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">living_room</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="s2">&quot;Living room&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;north&#39;</span><span class="p">:</span> <span class="s1">&#39;garden&#39;</span><span class="p">},</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">living_room</span><span class="o">.</span><span class="n">capacity</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Methods which begin and end with <strong>two underscores</strong> in their names fulfil special capabilities in Python, such as
+constructors.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Object-oriented-design">Object-oriented design<a class="anchor-link" href="#Object-oriented-design">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In building a computer system to model a problem, therefore, we often want to make:</p>
+<ul>
+<li>classes for each <em>kind of thing</em> in our system</li>
+<li>methods for each <em>capability</em> of that kind</li>
+<li>properties (defined in a constructor) for each <em>piece of information describing</em> that kind</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For example, the below program might describe our "Maze of Rooms" system:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We define a <code>Maze</code> class which can hold rooms:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Maze</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A maze containing zero or more rooms.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span> <span class="o">=</span> <span class="p">{}</span>
+        
+    <span class="k">def</span> <span class="nf">add_room</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">room</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add a room to the maze.&quot;&quot;&quot;</span>
+        <span class="n">room</span><span class="o">.</span><span class="n">maze</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># the room needs to know which maze it is a part of</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span><span class="p">[</span><span class="n">room</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">room</span>
+    
+    <span class="k">def</span> <span class="nf">occupants</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get list of occupants of all rooms in maze.&quot;&quot;&quot;</span>
+        <span class="k">return</span>  <span class="p">[</span>
+            <span class="n">occupant</span> 
+            <span class="k">for</span> <span class="n">room</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">occupant</span> <span class="ow">in</span> <span class="n">room</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">wander</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move all room occupants in a random direction.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">occupant</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">():</span>
+            <span class="n">occupant</span><span class="o">.</span><span class="n">wander</span><span class="p">()</span>
+                
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print a summary of the current state of the maze.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">room</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">room</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+            
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print summary of current maze state and then update.&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=&#39;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wander</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Simulate maze by iteratively randomly moving occupants.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And a <code>Room</code> class with exits, and people:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A room within a maze containing zero or more occupants.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exits</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">maze</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maze</span> <span class="o">=</span> <span class="n">maze</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># Room occupants starts empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="o">=</span> <span class="n">exits</span>  <span class="c1"># Should be a dictionary from directions to room names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        
+    <span class="k">def</span> <span class="nf">has_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether the room has space for more occupants.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
+    
+    <span class="k">def</span> <span class="nf">available_exits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get list of exits to rooms with space for more occupants.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="n">exit</span> <span class="k">for</span> <span class="n">exit</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">exits</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">maze</span><span class="o">.</span><span class="n">rooms</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">has_space</span><span class="p">()</span>
+        <span class="p">]</span>
+            
+    <span class="k">def</span> <span class="nf">random_valid_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Choose a random exit from those with space for more occupants.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">available_exits</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">available_exits</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">destination</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exit</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get room destination corresponding to specified exit.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">maze</span><span class="o">.</span><span class="n">rooms</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">exits</span><span class="p">[</span><span class="n">exit</span><span class="p">]]</span>
+    
+    <span class="k">def</span> <span class="nf">add_occupant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">occupant</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add an occupant to room.&quot;&quot;&quot;</span>
+        <span class="n">occupant</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="bp">self</span> <span class="c1"># The person needs to know which room it is in</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">[</span><span class="n">occupant</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">occupant</span>
+        
+    <span class="k">def</span> <span class="nf">delete_occupant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">occupant</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove an occupant from room.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">occupant</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print a description of the current occupants of the room.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We define a <code>Person</code> class for room occupants:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A person within a room in maze.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exit</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Use the specified exit to move to another room.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="o">.</span><span class="n">delete_occupant</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">destination</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="o">.</span><span class="n">destination</span><span class="p">(</span><span class="n">exit</span><span class="p">)</span>
+        <span class="n">destination</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> goes </span><span class="si">{</span><span class="n">exit</span><span class="si">}</span><span class="s2"> to the </span><span class="si">{</span><span class="n">destination</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">wander</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Try to move to another room via a random exit.&quot;&quot;&quot;</span>
+        <span class="n">exit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="o">.</span><span class="n">random_valid_exit</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">exit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">exit</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And we use these classes to define our people, rooms, and their relationships:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alice</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+<span class="n">carol</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Carol&#39;</span><span class="p">)</span>
+<span class="n">dan</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;Dan&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">living_room</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="s1">&#39;living room&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;outside&#39;</span><span class="p">:</span> <span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="s1">&#39;upstairs&#39;</span><span class="p">:</span> <span class="s1">&#39;bedroom&#39;</span><span class="p">,</span> <span class="s1">&#39;north&#39;</span><span class="p">:</span> <span class="s1">&#39;kitchen&#39;</span><span class="p">},</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">kitchen</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="s1">&#39;kitchen&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;south&#39;</span><span class="p">:</span> <span class="s1">&#39;living room&#39;</span><span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">garden</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;inside&#39;</span><span class="p">:</span> <span class="s1">&#39;living room&#39;</span><span class="p">},</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">bedroom</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="s1">&#39;bedroom&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;jump&#39;</span><span class="p">:</span> <span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="s1">&#39;downstairs&#39;</span><span class="p">:</span> <span class="s1">&#39;living room&#39;</span><span class="p">},</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="n">Maze</span><span class="p">(</span><span class="s1">&#39;house&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">room</span> <span class="ow">in</span> <span class="p">[</span><span class="n">living_room</span><span class="p">,</span> <span class="n">kitchen</span><span class="p">,</span> <span class="n">garden</span><span class="p">,</span> <span class="n">bedroom</span><span class="p">]:</span>
+    <span class="n">house</span><span class="o">.</span><span class="n">add_room</span><span class="p">(</span><span class="n">room</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">living_room</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">garden</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="n">bob</span><span class="p">)</span>
+<span class="n">garden</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="n">carol</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bedroom</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="n">dan</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And we can run a "simulation" of our model:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>================================================================================
+Living room: Alice
+Garden: Bob, Carol
+Bedroom: Dan
+--------------------------------------------------------------------------------
+Alice goes outside to the garden.
+Bob goes inside to the living room.
+Carol goes inside to the living room.
+Dan goes jump to the garden.
+================================================================================
+Living room: Bob, Carol
+Garden: Alice, Dan
+--------------------------------------------------------------------------------
+Bob goes outside to the garden.
+Carol goes north to the kitchen.
+Alice goes inside to the living room.
+Dan goes inside to the living room.
+================================================================================
+Living room: Alice, Dan
+Kitchen: Carol
+Garden: Bob
+--------------------------------------------------------------------------------
+Alice goes upstairs to the bedroom.
+Dan goes outside to the garden.
+Carol goes south to the living room.
+Bob goes inside to the living room.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Object-oriented-design">Object oriented design<a class="anchor-link" href="#Object-oriented-design">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are many choices for how to design programs to do this. Another choice would be to separately define exits as a different class from rooms. This way, 
+we can use arrays instead of dictionaries, but we have to first define all our rooms, then define all our exits.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Maze</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A maze containing zero or more rooms.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">add_room</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add room to maze with specified name and capacity.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">capacity</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rooms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+        
+    <span class="k">def</span> <span class="nf">add_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add exit from source to target room and optionally the reverse exit.&quot;&quot;&quot;</span>
+        <span class="n">source</span><span class="o">.</span><span class="n">add_exit</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">reverse</span><span class="p">:</span>
+            <span class="n">target</span><span class="o">.</span><span class="n">add_exit</span><span class="p">(</span><span class="n">reverse</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+            
+    <span class="k">def</span> <span class="nf">add_occupant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add an occupant to the specified room.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="p">))</span>
+        <span class="n">room</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">wander</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move all room occupants in a random direction.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">occupant</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">:</span>
+            <span class="n">occupant</span><span class="o">.</span><span class="n">wander</span><span class="p">()</span>
+                
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print a summary of the current state of the maze.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">occupant</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">occupants</span><span class="p">:</span>
+            <span class="n">occupant</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+            
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print summary of current maze state and then update.&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=&#39;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wander</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Simulate maze by iteratively randomly moving occupants.&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">class</span> <span class="nc">Room</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A room within a maze containing zero or more occupants.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">has_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether the room has space for more occupants.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span>
+    
+    <span class="k">def</span> <span class="nf">available_exits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get list of exits to rooms with space for more occupants.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">exit</span> <span class="k">for</span> <span class="n">exit</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">exits</span> <span class="k">if</span> <span class="n">exit</span><span class="o">.</span><span class="n">valid</span><span class="p">()]</span>
+            
+    <span class="k">def</span> <span class="nf">random_valid_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Choose a random exit from those with space for more occupants.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">available_exits</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">available_exits</span><span class="p">())</span>
+    
+    <span class="k">def</span> <span class="nf">add_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add an exit to the room.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Exit</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A person within a room in maze.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">room</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="n">room</span>
+    
+    <span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exit</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Use the specified exit to move to another room.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">destination</span> <span class="o">=</span> <span class="n">exit</span><span class="o">.</span><span class="n">target</span>
+        <span class="n">destination</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">room</span> <span class="o">=</span> <span class="n">destination</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> goes </span><span class="si">{</span><span class="n">exit</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> to the </span><span class="si">{</span><span class="n">destination</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">wander</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Try to move to another room via a random exit.&quot;&quot;&quot;</span>
+        <span class="n">exit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="o">.</span><span class="n">random_valid_exit</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">exit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">exit</span><span class="p">)</span>
+            
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Print a description of current location in maze.&quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is in the </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">room</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Exit</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;An exit from one room in maze to another.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+    
+    <span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">has_space</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="n">Maze</span><span class="p">(</span><span class="s1">&#39;house&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">living_room</span> <span class="o">=</span> <span class="n">house</span><span class="o">.</span><span class="n">add_room</span><span class="p">(</span><span class="s1">&#39;living room&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">bed</span> <span class="o">=</span> <span class="n">house</span><span class="o">.</span><span class="n">add_room</span><span class="p">(</span><span class="s1">&#39;bedroom&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">garden</span> <span class="o">=</span> <span class="n">house</span><span class="o">.</span><span class="n">add_room</span><span class="p">(</span><span class="s1">&#39;garden&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">kitchen</span> <span class="o">=</span> <span class="n">house</span><span class="o">.</span><span class="n">add_room</span><span class="p">(</span><span class="s1">&#39;kitchen&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">add_exit</span><span class="p">(</span><span class="s1">&#39;north&#39;</span><span class="p">,</span> <span class="n">living_room</span><span class="p">,</span> <span class="n">kitchen</span><span class="p">,</span> <span class="s1">&#39;south&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">add_exit</span><span class="p">(</span><span class="s1">&#39;upstairs&#39;</span><span class="p">,</span> <span class="n">living_room</span><span class="p">,</span> <span class="n">bed</span><span class="p">,</span> <span class="s1">&#39;downstairs&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">add_exit</span><span class="p">(</span><span class="s1">&#39;outside&#39;</span><span class="p">,</span> <span class="n">living_room</span><span class="p">,</span> <span class="n">garden</span><span class="p">,</span> <span class="s1">&#39;inside&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">add_exit</span><span class="p">(</span><span class="s1">&#39;jump&#39;</span><span class="p">,</span> <span class="n">bed</span><span class="p">,</span> <span class="n">garden</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">living_room</span><span class="p">)</span>
+<span class="n">house</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">garden</span><span class="p">)</span>
+<span class="n">house</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="s1">&#39;Carol&#39;</span><span class="p">,</span> <span class="n">bed</span><span class="p">)</span>
+<span class="n">house</span><span class="o">.</span><span class="n">add_occupant</span><span class="p">(</span><span class="s1">&#39;Dan&#39;</span><span class="p">,</span> <span class="n">garden</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">house</span><span class="o">.</span><span class="n">simulate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>================================================================================
+Alice is in the living room.
+Bob is in the garden.
+Carol is in the bedroom.
+Dan is in the garden.
+--------------------------------------------------------------------------------
+Alice goes north to the kitchen.
+Bob goes inside to the living room.
+Carol goes jump to the garden.
+Dan goes inside to the living room.
+================================================================================
+Alice is in the kitchen.
+Bob is in the living room.
+Carol is in the garden.
+Dan is in the living room.
+--------------------------------------------------------------------------------
+Bob goes outside to the garden.
+Carol goes inside to the living room.
+Dan goes upstairs to the bedroom.
+================================================================================
+Alice is in the kitchen.
+Bob is in the garden.
+Carol is in the living room.
+Dan is in the bedroom.
+--------------------------------------------------------------------------------
+Alice goes south to the living room.
+Carol goes outside to the garden.
+Dan goes downstairs to the living room.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a huge topic, about which many books have been written. The differences between these two designs are important, and will have long-term consequences for the project. That is the how we start to think about <strong>software engineering</strong>, as opposed to learning to program, and is where this course ends, and future courses begin!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise:-your-own-solution">Exercise: your own solution<a class="anchor-link" href="#Exercise:-your-own-solution">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Compare the two solutions above. Which do you like better, and why? Sarting from scratch, design your own. What choices did you make that are different?</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2022-10-27 12:26:24 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/doctoral-programming-intro/assets/js/lib/require.min.js"></script>
+  <script src="/doctoral-programming-intro/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+

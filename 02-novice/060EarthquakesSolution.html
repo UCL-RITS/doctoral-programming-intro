@@ -1,0 +1,1313 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>Earthquakes solution</title>
+
+  <link href="/doctoral-programming-intro/assets/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/doctoral-programming-intro/assets/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/doctoral-programming-intro/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/doctoral-programming-intro/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/doctoral-programming-intro/favicon-144.png">
+
+  <script src="/doctoral-programming-intro/assets/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/doctoral-programming-intro/assets/js/lib/html5shiv-printshiv.min.js', '/doctoral-programming-intro/assets/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/doctoral-programming-intro/assets/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/doctoral-programming-intro/assets/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/doctoral-programming-intro/assets/js/lib/require.min.js"></script>
+    <script src="/doctoral-programming-intro/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/doctoral-programming-intro/assets/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">An introduction to research programming with Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+
+
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/doctoral-programming-intro/01-beginner/">Part I</a><ul> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/023types.html">Types</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/038SolutionComprehension.html">Maze comprehension solution.</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/040functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/050import.html">Modules</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/060MatplotlibPyplot.html">Plotting (i)</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/060files.html">Working with files</a> </li></ul> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/">Part II</a><ul><li class="active"> <a href="/doctoral-programming-intro/02-novice/000Exemplar.html">An example program (ii)</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/010Internet.html">Internet</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/020TabularData.html">Tabular data</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/030StructuredData.html">Structured data</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/040MazeFilesSolution.html">Maze files solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/050EarthquakesExercise.html">Earthquakes exercise</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/060EarthquakesSolution.html">Earthquakes solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/070Classes.html">Classes</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/080NumPy.html">Numerical Python</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/090MatplotlibObjectOriented.html">Plotting (ii)</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/100Boids.html">Boids</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/110InstallingLibraries.html">Installing libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/120WritingLibraries.html">Writing libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/130ExemplarReview.html">Understanding the exemplar</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/900Counting.html"></a> </li> </ul> </li>
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/doctoral-programming-intro/assets/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          
+            <nav class="breadcrumb clearfix">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/ISD">ISD</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services">Our Services</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it">Research IT</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it/training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/doctoral-programming-intro/">Programming</a></li>
+
+
+
+              </ul>
+            </nav>
+           <div class="site-content__main">
+            
+               <div id="slidelink">
+                 <a href="/doctoral-programming-intro/02-novice/060EarthquakesSolution.ipynb">Notebook download</a>
+               </div>
+            
+            
+          
+          
+
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Solution:-the-biggest-earthquake-in-the-UK-this-century">Solution: the biggest earthquake in the UK this century<a class="anchor-link" href="#Solution:-the-biggest-earthquake-in-the-UK-this-century">&#182;</a></h1><h2 id="Import-modules">Import modules<a class="anchor-link" href="#Import-modules">&#182;</a></h2><p>We first import the modules we will need to get and plot the data. We will use the <code>requests</code> module to query the USGS earthquake catalog, the <code>math</code> module to do some coordinate conversion and the <code>IPython</code> module to display a map image.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Download-the-data">Download the data<a class="anchor-link" href="#Download-the-data">&#182;</a></h2><p>We can reuse the code provided in the exercise notebook to query the USGS earthquake catalog API using the <code>requests</code> module.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">earthquake_catalog_api_url</span> <span class="o">=</span> <span class="s2">&quot;http://earthquake.usgs.gov/fdsnws/event/1/query&quot;</span>
+<span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;geojson&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;starttime&quot;</span><span class="p">:</span> <span class="s2">&quot;2000-01-01&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;maxlatitude&quot;</span><span class="p">:</span> <span class="s2">&quot;60.830&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;minlatitude&quot;</span><span class="p">:</span> <span class="s2">&quot;49.877&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;maxlongitude&quot;</span><span class="p">:</span> <span class="s2">&quot;1.767&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;minlongitude&quot;</span><span class="p">:</span> <span class="s2">&quot;-8.182&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;minmagnitude&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;orderby&quot;</span><span class="p">:</span> <span class="s2">&quot;time-asc&quot;</span>
+<span class="p">}</span>
+<span class="n">quakes_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">earthquake_catalog_api_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">query_parameters</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can check that the returned object is a <code>Response</code> as expected</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">quakes_response</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>requests.models.Response</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It is also useful to check whether the status of the returned response corresponds to there not being any client or server errors, with this being indicated by a status code of 200</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">quakes_response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Parse-the-data-as-JSON">Parse the data as JSON<a class="anchor-link" href="#Parse-the-data-as-JSON">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We saw in the exercise notebooks that the <code>Reponse</code> objects returned by <code>requests.get</code> have various attributes that allow accessing the response content in different formats including <code>Response.content</code> to get the raw <code>bytes</code> content and <code>Response.text</code> to get the response as a (Unicode) <code>str</code> object. We can print out all of the attributes of an object in Python using the inbuilt <code>dir</code> function; typically these will include attributes intended for internal use only which are conventionally indicated by prefixing with an underscore character <code>_</code>. We can display all the attributes without an initial underscore character as follows.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">attribute</span> <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">quakes_response</span><span class="p">)</span> <span class="k">if</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;apparent_encoding&#39;,
+ &#39;close&#39;,
+ &#39;connection&#39;,
+ &#39;content&#39;,
+ &#39;cookies&#39;,
+ &#39;elapsed&#39;,
+ &#39;encoding&#39;,
+ &#39;headers&#39;,
+ &#39;history&#39;,
+ &#39;is_permanent_redirect&#39;,
+ &#39;is_redirect&#39;,
+ &#39;iter_content&#39;,
+ &#39;iter_lines&#39;,
+ &#39;json&#39;,
+ &#39;links&#39;,
+ &#39;next&#39;,
+ &#39;ok&#39;,
+ &#39;raise_for_status&#39;,
+ &#39;raw&#39;,
+ &#39;reason&#39;,
+ &#39;request&#39;,
+ &#39;status_code&#39;,
+ &#39;text&#39;,
+ &#39;url&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As well as the <code>content</code>, <code>ok</code>, <code>status_code</code> and <code>text</code> attributes we already encountered, we can see there is also a <code>json</code> attribute, which seems like it could be  relevant to our task of decoding the response as JSON. We can find out more about this attribute by using a useful feature of Jupyter / IPython - by adding a question mark <code>?</code> to the end of a Python object the documentation string (<code>docstring</code>) for that object will be displayed.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>quakes_response.json<span class="o">?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From this we can see that <code>quakes.response</code> is a method (function bound to an object) which returns a Python object corresponding to a JSON encoded response, which is exactly what we need. There are no required arguments so we can call the method by just adding a pair of empty parentheses.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes_json</span> <span class="o">=</span> <span class="n">quakes_response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we had not been aware of the <code>json</code> method an alternative would be to use the <code>json</code> module directly as we saw previously. For example the following would give an equivalent result to the above.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">quakes_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">quakes_response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Investigate-the-data-to-discover-how-it-is-structured.">Investigate the data to discover how it is structured.<a class="anchor-link" href="#Investigate-the-data-to-discover-how-it-is-structured.">&#182;</a></h2><p>Now that we have queried and decoded the data into a Python object, we need to do some exploration to find out how it is structure. In some cases there may be documentation we can use to help guide our exploration of data - for example <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">this page on the USGS earthquake catalog website</a> gives a summary of the GeoJSON format. However, in other cases we may not be so lucky and have to work with data with an undocumented format so it is also useful to consider how we might explore that data structure ourselves.</p>
+<p>A potentially useful first step is to check what the type of the <code>quakes_json</code> object is.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">quakes_json</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We see that <code>quakes_json</code> is a Python <code>dict</code> (dictionary) object. We might want to find out what keys are defined in this dictionary - we can do this by calling the <code>keys</code> method.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes_json</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;type&#39;, &#39;metadata&#39;, &#39;features&#39;, &#39;bbox&#39;])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We see that the dictionary has three keys, all of which are strings. The <code>features</code> key in particular here looks potentially promising for our goal of finding the maximum magnitude event in the data (on the rationale that the magnitude is a <em>feature</em> of the event). We can check what type the value associated with the <code>features</code> key is.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We find out that the <code>features</code> key contains a list. We can check the length of this list.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>141</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We could also use a set (which we encountered previously in the lesson on dictionaries) to find out what the set of types of all of the elements in the <code>quakes_json['features']</code> list is. Similarly to the list comprehensions we encountered in a previous lesson we can use a similar syntax here to succinctly construct the set we required.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="nb">type</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{dict}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From this we see that all of the elements in the <code>quakes_json['features']</code> share the same Python <code>dict</code> type. We can use a similar approach to find out what keys all these dictionary objects have.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="nb">tuple</span><span class="p">(</span><span class="n">feature</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{(&#39;type&#39;, &#39;properties&#39;, &#39;geometry&#39;, &#39;id&#39;)}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This tells us that as well as all the elements being dictionaries, all of the dictionaries have the same keys. This suggests the list corresponds to a representation of a sequence of objects of the same type, with each dictionary containing the 'features' for a particular object, with in in this case the objects in questions being particular earthquake events.</p>
+<p>To check this idea, we can look at the value of a particular element in the <code>features</code> list - as we know all elements are dictionaries with the same keys, its reasonable to assume the first element <code>quakes_json['features'][0]</code> will be representative of the all the other elements in the list. We can start by summarising the keys and types of the values in this dictionary.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>type str
+properties dict
+geometry dict
+id str
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also view the dictionary directly</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;type&#39;: &#39;Feature&#39;,
+ &#39;properties&#39;: {&#39;mag&#39;: 2.6,
+  &#39;place&#39;: &#39;12 km NNW of Penrith, United Kingdom&#39;,
+  &#39;time&#39;: 956553055700,
+  &#39;updated&#39;: 1415322596133,
+  &#39;tz&#39;: None,
+  &#39;url&#39;: &#39;https://earthquake.usgs.gov/earthquakes/eventpage/usp0009rst&#39;,
+  &#39;detail&#39;: &#39;https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=usp0009rst&amp;format=geojson&#39;,
+  &#39;felt&#39;: None,
+  &#39;cdi&#39;: None,
+  &#39;mmi&#39;: None,
+  &#39;alert&#39;: None,
+  &#39;status&#39;: &#39;reviewed&#39;,
+  &#39;tsunami&#39;: 0,
+  &#39;sig&#39;: 104,
+  &#39;net&#39;: &#39;us&#39;,
+  &#39;code&#39;: &#39;p0009rst&#39;,
+  &#39;ids&#39;: &#39;,usp0009rst,&#39;,
+  &#39;sources&#39;: &#39;,us,&#39;,
+  &#39;types&#39;: &#39;,impact-text,origin,phase-data,&#39;,
+  &#39;nst&#39;: None,
+  &#39;dmin&#39;: None,
+  &#39;rms&#39;: None,
+  &#39;gap&#39;: None,
+  &#39;magType&#39;: &#39;ml&#39;,
+  &#39;type&#39;: &#39;earthquake&#39;,
+  &#39;title&#39;: &#39;M 2.6 - 12 km NNW of Penrith, United Kingdom&#39;},
+ &#39;geometry&#39;: {&#39;type&#39;: &#39;Point&#39;, &#39;coordinates&#39;: [-2.81, 54.77, 14]},
+ &#39;id&#39;: &#39;usp0009rst&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From this we can see the <code>properties</code> and <code>geometry</code> keys both themselves map to <code>dict</code> objects. Within these inner dictionaries are several keys which look relevant to our task of identifying the highest magnitude earthquake event and displaying its location on a map. Specifically the <code>mag</code> key in the <code>properties</code> dictionary seems likely to represent the magnitude of the event</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>while the <code>coordinates</code> key in the <code>geometry</code> dictionary seems to represent the location of the event.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[-2.81, 54.77, 14]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If go to the URL listed as the value for the <code>url</code> key in the <code>properties</code> dictionary,</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;https://earthquake.usgs.gov/earthquakes/eventpage/usp0009rst&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>we can confirm that this is indeed a correct interpretation of the data as the listed magnitude corresponds to the value for the <code>mag</code> key while the longitude (East-West axis) and latitude (North-South axis) coordinates (in degrees) of the event location correspond to the first two elements respectively in the list associated with the <code>coordinates</code> key (with the third coordinate corresponding to the depth of the event).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Find-the-largest-quake(s)">Find the largest quake(s)<a class="anchor-link" href="#Find-the-largest-quake(s)">&#182;</a></h2><p>Now that we have a handle on the structure of the data, we are ready to search through the data to identify the largest magnitude earthquake event(s). We are interested in finding the element (or elements) in a sequence which maximises some property - this operation is termed the <a href="https://en.wikipedia.org/wiki/Arg_max">$\arg\max$ in mathematics and computer science</a>. While there is built-in <code>max</code> function in Python there is no corresponding <code>argmax</code> function, though several external libraries including the NumPy library which we encounter in a subsequent lesson do include an <code>argmax</code> function.</p>
+<p>We will therefore loop over all of the event details in the <code>features</code> list and construct a list of the event or events for which the magnitude is currently the largest, creating a new list if the magnitude of the current event is larger than the previous largest or adding the event to the previous list if it has an equal magnitude. After iterating through all the events this list should contain the details of the event(s) with the largest magnitude. An example implementation of this approach is as follows.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">largest_magnitude_events</span> <span class="o">=</span> <span class="p">[</span><span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="n">quake</span> <span class="ow">in</span> <span class="n">quakes_json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">quake</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">largest_magnitude_events</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]:</span>
+        <span class="n">largest_magnitude_events</span> <span class="o">=</span> <span class="p">[</span><span class="n">quake</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">quake</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">largest_magnitude_events</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]:</span>
+        <span class="n">largest_magnitude_events</span> <span class="o">+=</span> <span class="p">[</span><span class="n">quake</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can now check if there was a single event with the maximum magnitude or multiple</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">largest_magnitude_events</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It turns out there are two events with the same maximal magnitude. As a sanity check we can print the magnitude of both events to check that they match</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">([</span><span class="n">quake</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">quake</span> <span class="ow">in</span> <span class="n">largest_magnitude_events</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[4.8, 4.8]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get-a-map-at-the-point-of-the-quakes">Get a map at the point of the quakes<a class="anchor-link" href="#Get-a-map-at-the-point-of-the-quakes">&#182;</a></h2><p>There are various different web services which can be used to get map imagery, here we will <a href="https://www.openstreetmap.org/">OpenStreetMap</a>. Specifically we will get a pre-rendered map tile containing a location specified by latitude and longitude coordinates as a <em>portable network graphic</em> (PNG) image. <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Python">This page</a> on the OpenStreeMap wiki gives a Python implementation of a function <code>deg2num</code> to convert from a latitude-longitude pair in degrees plus a <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Zoom_levels">zoom level</a>, to a pair of indices specifying a specific map tile.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">deg2num</span><span class="p">(</span><span class="n">lat_deg</span><span class="p">,</span> <span class="n">lon_deg</span><span class="p">,</span> <span class="n">zoom</span><span class="p">):</span>
+    <span class="n">lat_rad</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">lat_deg</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">**</span> <span class="n">zoom</span>
+    <span class="n">xtile</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">lon_deg</span> <span class="o">+</span> <span class="mf">180.0</span><span class="p">)</span> <span class="o">/</span> <span class="mf">360.0</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">ytile</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">asinh</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">lat_rad</span><span class="p">))</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">xtile</span><span class="p">,</span> <span class="n">ytile</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are various <a href="https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Tile_servers">tile servers</a> for the OpenStreetMap data with differing rendering styles and URL templates. Here we use the 'standard' style tiles for which an appropiate URL template is <code>http://a.tile.openstreetmap.org/{zoom}/{x}/{y}.png</code> where <code>{zoom}</code> indicates the zoom level and <code>{x}</code> and <code>{y}</code> the two components of tile number returned by <code>deg2num</code>. We can use Python <a href="https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings">formatted string literals</a> to populate the template with the appropriate values and use the <code>requests.get</code> function to request the image corresponding to the URL. Finally we can create an <a href="https://ipython.readthedocs.io/en/stable/api/generated/IPython.display.html#IPython.display.Image"><code>IPython.display.Image</code> object</a> which will display the raw data corresponding to the contents of the image request as an image in the Jupyter Lab front end. We wrap this all in to a function <code>get_map_tile_at</code> to allow us to use it to display images for each of the largest magnitude earthquake events identified earlier.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_map_tile_at</span><span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">satellite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span> 
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">deg2num</span><span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="n">zoom</span><span class="p">)</span>
+    <span class="n">tile_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://a.tile.openstreetmap.org/</span><span class="si">{</span><span class="n">zoom</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">.png&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tile_url</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="k">return</span> <span class="n">IPython</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As a test we can check the map displayed for the coordinates of the <a href="https://geohack.toolforge.org/geohack.php?pagename=Prime_meridian_(Greenwich">Prime meridian at the Royal Observatory Greenwich</a>&amp;params=51_28_40.1_N_0_0_5.3_W_type:landmark_globe:earth_region:GB_scale:1000)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_map_tile_at</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">51.477806</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mf">0.001472</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [24], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">get_map_tile_at</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">latitude</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">51.477806</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">longitude</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">-</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0.001472</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">zoom</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">14</span><span class="ansi-yellow-bg">)</span>
+
+Cell <span class="ansi-green-fg">In [23], line 5</span>, in <span class="ansi-cyan-fg">get_map_tile_at</span><span class="ansi-blue-fg">(latitude, longitude, zoom, satellite)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> tile_url <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">http://a.tile.openstreetmap.org/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>zoom<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>x<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>y<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">.png</span><span style="color: rgb(175,0,0)">&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> response <span style="color: rgb(98,98,98)">=</span> requests<span style="color: rgb(98,98,98)">.</span>get(tile_url)
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> response<span style="color: rgb(98,98,98)">.</span>status_code <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">200</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> IPython<span style="color: rgb(98,98,98)">.</span>core<span style="color: rgb(98,98,98)">.</span>display<span style="color: rgb(98,98,98)">.</span>Image(response<span style="color: rgb(98,98,98)">.</span>content)
+
+<span class="ansi-red-fg">AssertionError</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Display-the-maps">Display the maps<a class="anchor-link" href="#Display-the-maps">&#182;</a></h2><p>We can now finally show the maps for the locations of the maximum magnitude earthquake events. As additional check we also print the description under the <code>title</code> key in the <code>properties</code> dictionary for the event to check it tallies with the location shown in the displayed map.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">quake</span> <span class="ow">in</span> <span class="n">largest_magnitude_events</span><span class="p">:</span>
+    <span class="n">longitude</span> <span class="o">=</span> <span class="n">quake</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">latitude</span> <span class="o">=</span> <span class="n">quake</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">quake</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">get_map_tile_at</span><span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>M 4.8 - 2 km ESE of Wombourn, United Kingdom
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [25], line 5</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> latitude <span style="color: rgb(98,98,98)">=</span> quake[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">geometry</span><span style="color: rgb(175,0,0)">&#39;</span>][<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">coordinates</span><span style="color: rgb(175,0,0)">&#39;</span>][<span style="color: rgb(98,98,98)">1</span>]
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span style="color: rgb(0,135,0)">print</span>(quake[<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">properties</span><span style="color: rgb(175,0,0)">&#39;</span>][<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">title</span><span style="color: rgb(175,0,0)">&#39;</span>])
+<span class="ansi-green-fg">----&gt; 5</span> display(<span class="ansi-yellow-bg">get_map_tile_at</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">latitude</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">longitude</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">12</span><span class="ansi-yellow-bg">)</span>)
+
+Cell <span class="ansi-green-fg">In [23], line 5</span>, in <span class="ansi-cyan-fg">get_map_tile_at</span><span class="ansi-blue-fg">(latitude, longitude, zoom, satellite)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> tile_url <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">http://a.tile.openstreetmap.org/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>zoom<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>x<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">/</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>y<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">.png</span><span style="color: rgb(175,0,0)">&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> response <span style="color: rgb(98,98,98)">=</span> requests<span style="color: rgb(98,98,98)">.</span>get(tile_url)
+<span class="ansi-green-fg">----&gt; 5</span> <span class="ansi-bold" style="color: rgb(0,135,0)">assert</span> response<span style="color: rgb(98,98,98)">.</span>status_code <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">200</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> IPython<span style="color: rgb(98,98,98)">.</span>core<span style="color: rgb(98,98,98)">.</span>display<span style="color: rgb(98,98,98)">.</span>Image(response<span style="color: rgb(98,98,98)">.</span>content)
+
+<span class="ansi-red-fg">AssertionError</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2022-10-27 12:26:24 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/doctoral-programming-intro/assets/js/lib/require.min.js"></script>
+  <script src="/doctoral-programming-intro/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+

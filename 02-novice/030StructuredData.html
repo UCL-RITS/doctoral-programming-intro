@@ -1,0 +1,948 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>Structured data</title>
+
+  <link href="/doctoral-programming-intro/assets/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/doctoral-programming-intro/assets/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/doctoral-programming-intro/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/doctoral-programming-intro/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/doctoral-programming-intro/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/doctoral-programming-intro/favicon-144.png">
+
+  <script src="/doctoral-programming-intro/assets/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/doctoral-programming-intro/assets/js/lib/html5shiv-printshiv.min.js', '/doctoral-programming-intro/assets/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/doctoral-programming-intro/assets/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/doctoral-programming-intro/assets/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/doctoral-programming-intro/assets/js/lib/require.min.js"></script>
+    <script src="/doctoral-programming-intro/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/doctoral-programming-intro/assets/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">An introduction to research programming with Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+
+
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/doctoral-programming-intro/01-beginner/">Part I</a><ul> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/023types.html">Types</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/038SolutionComprehension.html">Maze comprehension solution.</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/040functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/050import.html">Modules</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/060MatplotlibPyplot.html">Plotting (i)</a> </li> <li class="inactive"> <a href="/doctoral-programming-intro/01-beginner/060files.html">Working with files</a> </li></ul> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/">Part II</a><ul><li class="active"> <a href="/doctoral-programming-intro/02-novice/000Exemplar.html">An example program (ii)</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/010Internet.html">Internet</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/020TabularData.html">Tabular data</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/030StructuredData.html">Structured data</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/040MazeFilesSolution.html">Maze files solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/050EarthquakesExercise.html">Earthquakes exercise</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/060EarthquakesSolution.html">Earthquakes solution</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/070Classes.html">Classes</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/080NumPy.html">Numerical Python</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/090MatplotlibObjectOriented.html">Plotting (ii)</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/100Boids.html">Boids</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/110InstallingLibraries.html">Installing libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/120WritingLibraries.html">Writing libraries</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/130ExemplarReview.html">Understanding the exemplar</a> </li> <li class="active"> <a href="/doctoral-programming-intro/02-novice/900Counting.html"></a> </li> </ul> </li>
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/doctoral-programming-intro/assets/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          
+            <nav class="breadcrumb clearfix">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/ISD">ISD</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services">Our Services</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it">Research IT</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it/training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/doctoral-programming-intro/">Programming</a></li>
+
+
+
+              </ul>
+            </nav>
+           <div class="site-content__main">
+            
+               <div id="slidelink">
+                 <a href="/doctoral-programming-intro/02-novice/030StructuredData.ipynb">Notebook download</a>
+               </div>
+            
+            
+          
+          
+
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Structured-data">Structured data<a class="anchor-link" href="#Structured-data">&#182;</a></h1><p><em>Comma separated variable</em> (CSV) files can only store <em>tabular data</em> in which all records share the same fields and each field is a simple data type such as a string or number. We often want to store data which has a more complex <em>hierarchical structure</em>, for example data in which the fields in each record are themselves structured objects. Structured data formats like <a href="#JSON">JSON</a>, <a href="#YAML">YAML</a> and <a href="#XML">XML</a> are designed for this.</p>
+<h2 id="JSON">JSON<a class="anchor-link" href="#JSON">&#182;</a></h2><p>A very common structured data format is <a href="https://en.wikipedia.org/wiki/JSON"><em>JavaScript Object Notation</em> (JSON)</a>. As the name suggests this a JavaScript based format for storing data objects. JSON allows us to represent hierarchical data with a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure">tree-like structure</a>) by nesting sequence-like <em>arrays</em> (analogous to Python <code>list</code> objects) and mapping-like <em>objects</em> (analagous to Python <code>dict</code> objects), with the 'leaves' of the tree being one of a small set of simple data types:</p>
+<ul>
+<li><em>number</em>: a signed decimal number potentially using <a href="https://en.wikipedia.org/wiki/Scientific_notation#E_notation">E notation</a>, for example <code>12</code>, <code>0.58</code>, <code>6.022e23</code>. Unlike Python no distinction is made between integer and floating-point values.</li>
+<li><em>string</em>: a sequence of <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">Unicode characters</a> delimited with double quotation marks, for example <code>"Hello world"</code>, <code>""</code>, <code>"😀😄😁"</code>. Unlike Python, single quotation marks cannot be used as the delimiters instead.</li>
+<li><em>boolean</em>: one of the literals <code>true</code> or <code>false</code>. Note the difference in capitalisation from the equivalent Python values.</li>
+<li><code>null</code>: an empty value, comparable to <code>None</code> in Python.</li>
+</ul>
+<p>JSON <em>arrays</em> are ordered sequences of zero or more elements, and like Python lists are delimited with square brackets with comma separated values. Also like Python lists each element in the array can be of a different type, with the allowable types being the any of the four simple types described above, arrays or objects (see following).</p>
+<p>JSON <em>objects</em> are <em>key-value</em> mappings in which the keys are strings and the values may be any of the simple data types above, arrays or objects. As with Python dictionaries, the keys within each object must be unique, and also like Python dictionaries objects are delimited with curly braces, with each key-value pair comma-separated and a colon used to separate the key from the following value.</p>
+<p>The <code>json</code> module in the Python standard library provides functions for encoding / decoding Python data structures to / from JSON format.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Specifically <code>json</code> uses the following translations between types when decoding and encoding</p>
+<div style='text-align: center;'>
+
+<table style='vertical-align: top; display: inline-block'>
+    <tr> <th colspan="2"> Decoding (JSON to Python) </th> </tr>
+    <tr> <th> JSON </th> <th> Python </th> </tr>
+    <tr> <td> object </td> <td> dict </td> </tr>
+    <tr> <td> array </td> <td> list </td> </tr>
+    <tr> <td> string </td> <td> str </td> </tr>
+    <tr> <td> number (integer) </td> <td> int </td> </tr>
+    <tr> <td> number (real) </td> <td> float </td> </tr>
+    <tr> <td> boolean </td> <td> bool </td> </tr>
+    <tr> <td> null </td> <td> None </td> </tr>
+</table>
+
+<table style='vertical-align: top; display: inline-block'>
+    <tr> <th colspan="2"> Encoding (Python to JSON) </th> </tr>
+    <tr> <th> Python </th> <th> JSON </th> </tr>
+    <tr> <td> dict </td> <td> object </td> </tr>
+    <tr> <td> list, tuple </td> <td> array </td> </tr>
+    <tr> <td> str </td> <td> string </td> </tr>
+    <tr> <td> int, float </td> <td> number </td> </tr>
+    <tr> <td> bool </td> <td> boolean </td> </tr>
+    <tr> <td> None </td> <td> null </td> </tr>
+</table>
+
+</div><p>Note that mapping of types when encoding from Python to JSON is not one-to-one so sequentially encoding a Python object to JSON and then decoding back to a Python object can result in some changes in types.</p>
+<p>As a simple example consider the following Python object consisting of nested dictionaries and lists:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_data</span> <span class="o">=</span>  <span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;spam&#39;</span><span class="p">:</span> <span class="mf">3.4</span><span class="p">,</span> <span class="s1">&#39;eggs&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can encode this Python object to a JSON formatted string using the <a href="https://docs.python.org/3/library/json.html#json.dumps"><code>json.dumps</code> function</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;foo&#34;: [&#34;value&#34;, 1, true], &#34;bar&#34;: {&#34;spam&#34;: 3.4, &#34;eggs&#34;: null}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>json.dumps</code> function has several optional keyword arguments that can be used to produce a more nicely formatted output which can be useful to increase readability when encoding large objects, for instance</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">my_data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{
+    &#34;bar&#34;: {
+        &#34;eggs&#34;: null,
+        &#34;spam&#34;: 3.4
+    },
+    &#34;foo&#34;: [
+        &#34;value&#34;,
+        1,
+        true
+    ]
+}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can then easily save the JSON formatted string to a file using the <code>open</code> function we encountered in a previous lesson.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As encoding a Python object to JSON format and writing the result to a file is such a common operation, the <code>json</code> module also provides the <code>json.dump</code> function which can be used to directly write the JSON encoding of a Python object to a file:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can similarly use <code>open</code> to read JSON formatted data in to a string</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+     <span class="n">loaded_json_string</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">loaded_json_string</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;foo&#34;: [&#34;value&#34;, 1, true], &#34;bar&#34;: {&#34;spam&#34;: 3.4, &#34;eggs&#34;: null}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can then use the <a href="https://docs.python.org/3/library/json.html#json.loads"><code>json.loads</code> function</a> to decode this JSON formatted string in to a Python object</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">loaded_json_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;loaded_data = </span><span class="si">{</span><span class="n">loaded_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(loaded_data) = </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(loaded_data[&#39;foo&#39;]) = </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>loaded_data = {&#39;foo&#39;: [&#39;value&#39;, 1, True], &#39;bar&#39;: {&#39;spam&#39;: 3.4, &#39;eggs&#39;: None}}
+type(loaded_data) = dict
+type(loaded_data[&#39;foo&#39;]) = list
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As with <code>json.dumps</code> and <code>json.dump</code>, there is also a <a href="https://docs.python.org/3/library/json.html#json.load"><code>json.load</code> function</a> which can be used to directly load a JSON formatted file in to a Python object:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+     <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;loaded_data = </span><span class="si">{</span><span class="n">loaded_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>loaded_data = {&#39;foo&#39;: [&#39;value&#39;, 1, True], &#39;bar&#39;: {&#39;spam&#39;: 3.4, &#39;eggs&#39;: None}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>JSON is a very useful format for loading and saving Python data structures. It is a common way of transferring data on the internet, and as there is good support in many programming languages, it is a convenient inter-language file interchange format.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="YAML">YAML<a class="anchor-link" href="#YAML">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>YAML (<a href="https://en.wikipedia.org/wiki/YAML#History_and_name">originally short for <em>Yet Another Markup Language</em></a>) is another structured data format with many similarities to JSON; in fact <a href="https://en.wikipedia.org/wiki/YAML#Comparison_with_JSON">recent versions of YAML are a superset of JSON</a>. As well as supporting the same types and syntax as JSON, YAML also several additional features which can allow more readable formatting of data, for example</p>
+<ul>
+<li>Similar to Python, whitespace indentation can be used to denote nested structures rather than using explicit delimiters. </li>
+<li>Strings do not need to be delimited with quotes in most cases other than when escaping special characters.</li>
+<li>Comments can be included by prefixing with the <code>#</code> character, with all subsequent characters up to the end of the line ignored when decoding.</li>
+<li>Arrays (lists) can be denoted by placing each element on a separate line prefixed with a <code>-</code> character.</li>
+<li>Objects (dictionaries) can be denoted by placing each key-value pair on a separate line with a <code>:</code> character separating the key and value.</li>
+</ul>
+<p>For example, the following text represents an equivalent data object as encountered in the previous JSON section in a YAML compatible format</p>
+<div class="highlight"><pre><span></span><span class="nt">foo</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># The following is a list</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="nt">bar</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># The indentation heres indicates the following lines are a nested object</span><span class="w"></span>
+<span class="w">  </span><span class="nt">spam</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.4</span><span class="w"></span>
+<span class="w">  </span><span class="nt">eggs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span><span class="w"></span>
+</pre></div>
+<p>Unlike for JSON, there is no built-in module for encoding / decoding YAML files in the Python standard library. One third-party option is the <a href="https://pyyaml.org/wiki/PyYAMLDocumentation">PyYAML</a> library. If PyYAML is installed in the active Python environment (it is included in the Anaconda Python distribution for example), then the <code>yaml</code> module can then be imported by running the following</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">yaml</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [10], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">import</span> <span class="ansi-bold" style="color: rgb(0,0,255)">yaml</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;yaml&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Similarly to the <code>json.dump</code> and <code>json.dumps</code> functions, <code>yaml</code> provides a <code>dump</code> function which can be used to encode a Python object to a corresponding YAML formatted string <em>or</em> directly write the YAML formatted output to a file. When called without a <code>stream</code> keyword argument the <code>yaml.dump</code> function returns a YAML formatted string corresponding to the passed object (analogous to <code>json.dumps</code>):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yaml_string</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yaml_string</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [11], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> yaml_string <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">yaml</span><span style="color: rgb(98,98,98)">.</span>dump(my_data)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(yaml_string)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;yaml&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we instead pass a stream-like object such as a file as the second argument, the output will instead be written directly to the stream (analogous to <code>json.dump</code>):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">my_data</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [12], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">open</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">my_file.yaml</span><span style="color: rgb(175,0,0)">&#39;</span>, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">w</span><span style="color: rgb(175,0,0)">&#39;</span>) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> f:
+<span class="ansi-green-fg">----&gt; 2</span>     <span class="ansi-yellow-bg">yaml</span><span style="color: rgb(98,98,98)">.</span>dump(my_data, stream<span style="color: rgb(98,98,98)">=</span>f)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;yaml&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>yaml</code> module also provides a <code>load</code> function analogous to the <code>json.load</code> function for loading objects from YAML formatted files. Although YAML itself only represents data, it supports language-specific tags which YAML parsers such as PyYAML may use to allow representing arbitrary types. As this means PyYAML can construct Python objects which may execute code on loading, loading YAML files from untrusted sources can be a <a href="https://pyyaml.org/wiki/PyYAMLDocumentation#loading-yaml">security concern</a>. It is therefore recommended to use <code>yaml.safe_load</code> to load YAML files when you are unsure about their source as this removes the risk of arbitrary code execution (with the tradeoff of no longer being able to encode any Python object). As the data object we just wrote to file only uses simple types, we can use <code>yaml.safe_load</code> here without any issues.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;loaded_data = </span><span class="si">{</span><span class="n">loaded_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(loaded_data) = </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;type(loaded_data[&#39;foo&#39;]) = </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">loaded_data</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In [13], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span style="color: rgb(0,135,0)">open</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">my_file.yaml</span><span style="color: rgb(175,0,0)">&#39;</span>, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">r</span><span style="color: rgb(175,0,0)">&#39;</span>) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> f:
+<span class="ansi-green-fg">----&gt; 2</span>     loaded_data <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">yaml</span><span style="color: rgb(98,98,98)">.</span>safe_load(f)
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">loaded_data = </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>loaded_data<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">type(loaded_data) = </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span style="color: rgb(0,135,0)">type</span>(loaded_data)<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__name__</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">&#34;</span>)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;yaml&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>YAML is a very versatile format for ad-hoc data files, however, as YAML encoding / decoding is not part of the Python standard library, JSON is sometimes preferred for its increased ease of use and universality.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="XML">XML<a class="anchor-link" href="#XML">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Supplementary material</em></p>
+<p><a href="http://www.w3schools.com/xml/"><em>Extensible Markup Language</em> (XML)</a> is another popular format for storing hierarchical data structures. XML is very general and flexible, but is also very verbose which can hinder the human readability of XML encoded data and lead to large file sizes. In some scientific fields, XML based formats for data storage are very common. If you want to read and write XML formatted data in Python, a collection of tools for processing XML are available in the standard library within the <a href="https://docs.python.org/3/library/xml.html">XML package</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise:-saving-and-loading-a-maze">Exercise: saving and loading a maze<a class="anchor-link" href="#Exercise:-saving-and-loading-a-maze">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use YAML or JSON to save to disk, and to load it again, the maze data structure you designed in the previous <em>A Maze Model</em> exercise or the example solution below if you do not have a solution to hand.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">maze</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;living&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;exits&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;north&#39;</span> <span class="p">:</span> <span class="s1">&#39;kitchen&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;outside&#39;</span> <span class="p">:</span> <span class="s1">&#39;garden&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;upstairs&#39;</span> <span class="p">:</span> <span class="s1">&#39;bedroom&#39;</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;people&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;James&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;capacity&#39;</span> <span class="p">:</span> <span class="mi">2</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;kitchen&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;exits&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;south&#39;</span> <span class="p">:</span> <span class="s1">&#39;living&#39;</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;people&#39;</span> <span class="p">:</span> <span class="p">[],</span>
+        <span class="s1">&#39;capacity&#39;</span> <span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;garden&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;exits&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;inside&#39;</span> <span class="p">:</span> <span class="s1">&#39;living&#39;</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;people&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sue&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;capacity&#39;</span> <span class="p">:</span> <span class="mi">3</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;bedroom&#39;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;exits&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;downstairs&#39;</span> <span class="p">:</span> <span class="s1">&#39;living&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;jump&#39;</span> <span class="p">:</span> <span class="s1">&#39;garden&#39;</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;people&#39;</span> <span class="p">:</span> <span class="p">[],</span>
+        <span class="s1">&#39;capacity&#39;</span> <span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2022-10-27 12:26:24 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/doctoral-programming-intro/assets/js/lib/require.min.js"></script>
+  <script src="/doctoral-programming-intro/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/doctoral-programming-intro/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+
