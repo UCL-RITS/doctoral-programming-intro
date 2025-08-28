@@ -9,7 +9,7 @@ defaults:
 
 baseurl: /doctoral-programming-intro
 
-remote_theme: dpshelio/indigo-jekyll
+remote_theme: UCL-ARC/indigo-jekyll
 
 crumbs:
   - link: http://www.ucl.ac.uk/ISD
