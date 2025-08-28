@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  Build-website:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -36,14 +36,26 @@ jobs:
           path: ".github/python/requirements.txt"
       - name: Building notes
         run: make ready
-      - name: Builds website
-        uses: helaili/jekyll-action@v2
-        with:
-          target_branch: 'gh-pages'
-          build_only: true
-      - name: Build website and deploy
-        if: github.ref == 'refs/heads/main'
-        uses: helaili/jekyll-action@v2
-        with:
-          target_branch: 'gh-pages'
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build website
+        uses: actions/jekyll-build-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    if: >
+      github.ref == 'refs/heads/main'
+      && github.repository == 'UCL-RITS/doctoral-programming-intro'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
