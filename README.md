@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository contains material from an old course at UCL.
+> The course website is [still live](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/) for reference. But bear in mind that material may become outdated.
+
 # Doctoral programming intro
 
 Notebooks containing lesson materials for 
